@@ -2593,7 +2593,7 @@ input, select, textarea {
 		justify-content: space-between;
 		background-color: #1f1815;
 		background-attachment: scroll,								scroll;
-		background-image: url("images/overlay.png"), url("../../images/bg.jpg");
+		background-image: url("images/overlay.png"), url("../../images/bg3.jpg");
 		background-position: top left,							top left;
 		background-repeat: repeat,								no-repeat;
 		background-size: auto,								150%;
@@ -2640,7 +2640,7 @@ input, select, textarea {
 
 		#header .image.avatar {
 			margin: 0 0 1em 0;
-			width: 6.25em;
+			width: 9.25em;
 		}
 
 /* Footer */
@@ -3211,7 +3211,7 @@ input, select, textarea {
 		/* Footer */
 
 			#footer .copyright li {
-				border-left-width: 0;
+				border-left-width: ;
 				display: block;
 				line-height: 2.25em;
 				margin-left: 0;
@@ -3219,3 +3219,5 @@ input, select, textarea {
 			}
 
 	}
+
+    
