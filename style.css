@@ -29,6 +29,10 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;}
 
+
+
+
+	
 body {
 	line-height: 1;
 }
@@ -2647,6 +2651,7 @@ input, select, textarea {
 
 	#footer .icons {
 		margin: 1em 0 0 0;
+		
 	}
 
 		#footer .icons a {
