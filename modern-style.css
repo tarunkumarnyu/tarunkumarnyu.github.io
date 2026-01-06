@@ -513,7 +513,8 @@ section {
     overflow: hidden;
 }
 
-.video-background video {
+.video-background video,
+.video-background .background-video {
     position: absolute;
     top: 50%;
     left: 50%;
