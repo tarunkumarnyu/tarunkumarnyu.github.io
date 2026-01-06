@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initExperienceTabs();
     initProjectCards();
     initTypingEffect();
+    initVideoBackground();
 });
 
 /* ============================================
@@ -422,5 +423,28 @@ window.addEventListener('resize', debounce(() => {
         }
     }
 }, 250));
+
+/* ============================================
+   VIDEO BACKGROUND AUTOPLAY
+   ============================================ */
+function initVideoBackground() {
+    const video = document.getElementById('bg-video');
+    if (!video) return;
+
+    // Force autoplay on load
+    video.play().catch(function (error) {
+        console.log('Video autoplay was prevented:', error);
+        // Try playing on user interaction
+        document.addEventListener('click', function playOnClick() {
+            video.play();
+            document.removeEventListener('click', playOnClick);
+        }, { once: true });
+    });
+
+    // Ensure video loops and stays muted
+    video.muted = true;
+    video.loop = true;
+    video.playsInline = true;
+}
 
 console.log('✨ World-class portfolio animations loaded!');
