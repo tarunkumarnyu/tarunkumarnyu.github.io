@@ -1,0 +1,486 @@
+/* ============================================
+   PREMIUM VISUAL ENHANCEMENTS
+   Award-winning aesthetic upgrades
+   ============================================ */
+
+/* Animated Gradient Background Overlay */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        radial-gradient(ellipse at 20% 80%, rgba(100, 255, 218, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 80% 20%, rgba(102, 126, 234, 0.03) 0%, transparent 50%),
+        radial-gradient(ellipse at 50% 50%, rgba(0, 212, 255, 0.02) 0%, transparent 70%);
+    pointer-events: none;
+    z-index: 0;
+    animation: ambientShift 20s ease-in-out infinite alternate;
+}
+
+@keyframes ambientShift {
+    0% {
+        background:
+            radial-gradient(ellipse at 20% 80%, rgba(100, 255, 218, 0.03) 0%, transparent 50%),
+            radial-gradient(ellipse at 80% 20%, rgba(102, 126, 234, 0.03) 0%, transparent 50%);
+    }
+
+    100% {
+        background:
+            radial-gradient(ellipse at 80% 20%, rgba(100, 255, 218, 0.03) 0%, transparent 50%),
+            radial-gradient(ellipse at 20% 80%, rgba(102, 126, 234, 0.03) 0%, transparent 50%);
+    }
+}
+
+/* Enhanced Hero Section */
+.hero-intro {
+    position: relative;
+    display: inline-block;
+}
+
+.hero-intro::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--cyan), transparent);
+    animation: introLine 1s ease 1.2s forwards;
+}
+
+@keyframes introLine {
+    to {
+        width: 100%;
+    }
+}
+
+/* Glowing Text Effect */
+.hero-name {
+    text-shadow:
+        0 0 10px rgba(100, 255, 218, 0.1),
+        0 0 20px rgba(100, 255, 218, 0.05),
+        0 0 30px rgba(100, 255, 218, 0.025);
+    transition: text-shadow 0.3s ease;
+}
+
+.hero-name:hover {
+    text-shadow:
+        0 0 20px rgba(100, 255, 218, 0.3),
+        0 0 40px rgba(100, 255, 218, 0.2),
+        0 0 60px rgba(100, 255, 218, 0.1);
+}
+
+/* Premium Glassmorphism Cards */
+.project-card,
+.stat-card,
+.cert-card {
+    background: linear-gradient(135deg,
+            rgba(17, 34, 64, 0.8) 0%,
+            rgba(17, 34, 64, 0.4) 100%) !important;
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(100, 255, 218, 0.1) !important;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.3),
+        inset 0 0 0 1px rgba(255, 255, 255, 0.05);
+    transition: all 0.4s cubic-bezier(0.23, 1, 0.32, 1) !important;
+}
+
+.project-card:hover,
+.stat-card:hover,
+.cert-card:hover {
+    border-color: rgba(100, 255, 218, 0.4) !important;
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        0 0 40px rgba(100, 255, 218, 0.1),
+        inset 0 0 0 1px rgba(100, 255, 218, 0.1);
+}
+
+/* Animated Number Counter Effect */
+.stat-number {
+    background: linear-gradient(135deg,
+            var(--cyan) 0%,
+            #00d4ff 50%,
+            #4facfe 100%);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientFlow 3s ease infinite;
+}
+
+@keyframes gradientFlow {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Enhanced Tech Badges */
+.tech-badge {
+    background: rgba(100, 255, 218, 0.08) !important;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    padding: 8px 16px !important;
+    font-size: 12px !important;
+    border-radius: 30px !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.tech-badge::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: radial-gradient(circle, rgba(100, 255, 218, 0.3), transparent 70%);
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.tech-badge:hover::before {
+    width: 200px;
+    height: 200px;
+}
+
+/* Premium Button Styles */
+.hero-cta,
+.contact-button,
+.resume-button {
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-cta::before,
+.contact-button::before,
+.resume-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: var(--cyan);
+    transition: all 0.5s ease;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.hero-cta:hover::before,
+.contact-button:hover::before,
+.resume-button:hover::before {
+    width: 300%;
+    height: 300%;
+}
+
+.hero-cta:hover,
+.contact-button:hover,
+.resume-button:hover {
+    color: var(--bg-dark) !important;
+    border-color: var(--cyan) !important;
+}
+
+/* Floating Animation for Avatar */
+.image.avatar {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(-50%);
+    }
+
+    50% {
+        transform: translateY(calc(-50% - 20px));
+    }
+}
+
+/* Enhanced Project Image Hover */
+.project-image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: var(--border-radius);
+}
+
+.project-image-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(100, 255, 218, 0.2) 0%,
+            transparent 50%,
+            rgba(100, 255, 218, 0.1) 100%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    z-index: 1;
+}
+
+.project-image-wrapper:hover::before {
+    opacity: 1;
+}
+
+.project-image-wrapper img {
+    transition: transform 0.6s cubic-bezier(0.23, 1, 0.32, 1), filter 0.4s ease;
+}
+
+.project-image-wrapper:hover img {
+    transform: scale(1.08);
+    filter: brightness(1.1) saturate(1.2);
+}
+
+/* Neon Glow on Links */
+.navbar-links a:hover,
+.social-links a:hover,
+.email-link:hover {
+    text-shadow: 0 0 10px rgba(100, 255, 218, 0.5);
+}
+
+/* Premium Section Dividers */
+.numbered-heading::after {
+    background: linear-gradient(90deg,
+            rgba(100, 255, 218, 0.5),
+            rgba(100, 255, 218, 0.1),
+            transparent) !important;
+    height: 2px !important;
+}
+
+/* Animated skill list items */
+.skills-list li {
+    transition: all 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateX(10px);
+    color: var(--cyan);
+}
+
+.skills-list li:hover::before {
+    transform: scale(1.3);
+}
+
+/* Enhanced Experience Tabs */
+.tab-button {
+    position: relative;
+    overflow: hidden;
+}
+
+.tab-button::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0;
+    background: linear-gradient(transparent, rgba(100, 255, 218, 0.05));
+    transition: height 0.3s ease;
+}
+
+.tab-button:hover::after {
+    height: 100%;
+}
+
+/* Pulsing Contact Button */
+.contact-button {
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+@keyframes pulse-glow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(100, 255, 218, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 15px rgba(100, 255, 218, 0);
+    }
+}
+
+/* Loading screen enhancement */
+.loader-logo {
+    animation: pulse 1.5s ease infinite, logoGlow 2s ease-in-out infinite alternate !important;
+}
+
+@keyframes logoGlow {
+    from {
+        text-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
+    }
+
+    to {
+        text-shadow: 0 0 40px rgba(100, 255, 218, 0.8), 0 0 60px rgba(100, 255, 218, 0.4);
+    }
+}
+
+/* Reveal animations enhanced */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Staggered fade-up */
+.fade-up {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+.fade-up.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Footer enhancement */
+#footer {
+    position: relative;
+}
+
+#footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.3), transparent);
+}
+
+/* Scanline overlay (subtle cyberpunk effect) */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: repeating-linear-gradient(0deg,
+            transparent,
+            transparent 2px,
+            rgba(0, 0, 0, 0.03) 2px,
+            rgba(0, 0, 0, 0.03) 4px);
+    pointer-events: none;
+    z-index: 9997;
+    opacity: 0.5;
+}
+
+/* Custom scrollbar glow */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(var(--bg-lighter), var(--cyan)) !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    box-shadow: 0 0 10px var(--cyan);
+}
+
+/* Noise texture overlay for depth */
+.spotlight::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.02;
+    pointer-events: none;
+}
+
+/* Print-ready adjustments */
+@media print {
+
+    body::before,
+    body::after,
+    .spotlight,
+    .cursor-trail-dot,
+    #ambient-3d {
+        display: none !important;
+    }
+}
+
+/* ============================================
+   3D MODEL VIEWER STYLES
+   ============================================ */
+
+.model-showcase {
+    width: 100%;
+    margin-top: 40px;
+}
+
+.model-viewer {
+    width: 100%;
+    height: 500px;
+    min-height: 500px;
+    border-radius: 8px;
+    background: linear-gradient(135deg, rgba(5, 5, 8, 0.95) 0%, rgba(10, 15, 25, 0.95) 100%);
+    border: 1px solid rgba(100, 255, 218, 0.15);
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.4),
+        inset 0 0 60px rgba(0, 212, 255, 0.03);
+    position: relative;
+    overflow: hidden;
+    display: block;
+}
+
+.model-viewer canvas {
+    border-radius: var(--border-radius);
+}
+
+.model-loading {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 10;
+}
+
+.loading-spinner {
+    width: 50px;
+    height: 50px;
+    border: 3px solid rgba(100, 255, 218, 0.1);
+    border-top-color: var(--cyan);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 15px;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-text {
+    color: var(--slate);
+    font-family: var(--font-mono);
+    font-size: 14px;
+}
+
+.loading-percent {
+    color: var(--cyan);
+}
+
+@media (max-width: 768px) {
+    .model-viewer {
+        height: 350px;
+    }
+}

@@ -1,622 +1,411 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>My Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body class="is-preload">
+<html lang="en">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					<a href="#" class="image avatar"><img src="images/profilepic.JPG" alt="" /></a>
-					<h1><strong>I am Tarunkumar Palanivelan</strong>,<br />
-                        Mechatronics and Robotics engineer pursuing a Master’s at NYU Tandon, specializing in UAVs, UGVs, and robotic systems—seeking opportunities to drive innovation in autonomous technologies.<br />
-					</h1>
-					<br>
-					<a href="files/resume.pdf" download="My_Resume">Download Resume</a>
-					
-					<div class="inner">
-						<ul class="icons">
-							
-							<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-							
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						
-					</div>
-				</div>
+<head>
+	<title>Tarunkumar Palanivelan | Robotics Engineer</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description"
+		content="Mechatronics and Robotics engineer specializing in UAVs, UGVs, and autonomous robotic systems. M.S. Mechatronics at NYU Tandon." />
+	<link rel="stylesheet" href="modern-style.css" />
+	<link rel="stylesheet" href="premium-styles.css" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+	<!-- Three.js for 3D Model Viewer -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/loaders/GLTFLoader.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/three@0.128.0/examples/js/controls/OrbitControls.js"></script>
+</head>
 
-			</header>
+<body>
 
-		<!-- Main -->
-			<div id="main">
+	<!-- Spotlight cursor effect -->
+	<div class="spotlight"></div>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>TARUNKUMAR PALANIVELAN</h2>
-                            <h3>Mechatronics and Robotics Engineer</h3>
-						</header>
-						<p>Mechatronics and Robotics engineer with expertise in designing, developing, and analyzing advanced UAVs, UGVs, and robotic systems. Currently pursuing a Master’s in Mechatronics and Robotics at NYU Tandon School of Engineering, I bring a strong foundation in mechanical design, control systems, and computer vision. My academic and professional journey reflects a commitment to innovation, efficiency, and excellence, demonstrated by award-winning projects and a proven track record in drone and robotic technologies.</p>
-						
-					</section>
+	<!-- Loading Screen -->
+	<div class="loader">
+		<div class="loader-content">
+			<img src="images/profile1.jpg" alt="TP" class="loader-avatar" />
+		</div>
+	</div>
 
-					<section id="half">
-                    <h2>EDUCATION</h2>
-                    <div class="row">
-                        <div class="col-12 col-12-xsmall">
-                           
-                            
-                            <ul class="alt">
-                                <li>NEW YORK UNIVERSITY - TANDON SCHOOL OF ENGINEERING</li>
-                                <h5>Master of Science, Mechatronics and Robotics </h5>
-                                <li>SRM INSTITUTE OF SCIENCE AND TECHNOLOGY</li>
-                                <h5>Bachelor of Technology, Mechatronics with Specialization in Robotics </h5>
-                                <li>RYAN INTERNATIONAL SCHOOL</li>
-                                <h5>Higher Secondary Examination, CBSE </h5>
-                            </ul>
-                        </div>
-                    </div>
-					</section>
+	<!-- Navigation -->
+	<nav class="navbar">
+		<a href="#" class="navbar-logo"><img src="images/profile1.jpg" alt="TP" class="nav-avatar" /></a>
+		<ul class="navbar-links">
+			<li><a href="#one">About</a></li>
+			<li><a href="#quater">Experience</a></li>
+			<li><a href="#two">Projects</a></li>
+			<li><a href="#three">Certifications</a></li>
+			<li><a href="#four">Contact</a></li>
+		</ul>
+		<a href="files/resume.pdf" download class="resume-button">Resume</a>
+		<div class="menu-toggle">
+			<span></span>
+			<span></span>
+			<span></span>
+		</div>
+	</nav>
 
-					
+	<!-- Side Elements -->
+	<div class="side-element side-left">
+		<ul class="social-links">
+			<li><a href="https://github.com/tarunkumarnyu" target="_blank" aria-label="GitHub"><i
+						class="fab fa-github"></i></a></li>
+			<li><a href="https://linkedin.com/in/tarunkumar-palanivelan" target="_blank" aria-label="LinkedIn"><i
+						class="fab fa-linkedin-in"></i></a></li>
+			<li><a href="mailto:tarun002kumar@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a></li>
+		</ul>
+	</div>
 
-				<!-- Two -->
-					<section id="two">
-						<h2>PROJECTS</h2>
-						<div class="row">
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="reconfig.html" class="image fit thumb"><img src="images/UAVUGV.png" alt="" /></a>
-								<h3>Reconfigurable UAV+UGV</h3>
-								<p>Designed a prototype of a UAV that transforms into a UGV when required for ground motion. Performed multiple analysis including FEA, CFD and Topology. Presented it a my Final year Project and secured a perfect score.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/Phoenix.png" alt="" /></a>
-								<h3>Phoenix</h3>
-								<p>Designed a high altitude drone with a payload carrying capability of 11lbs. Designed a Molicel Battey pack thus increasing the endurance in comparison with lithium polymer battery. Tested autonomous mission at a height of 0.6 mile.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/osprey2.jpeg" alt="" /></a>
-								<h3>Osprey</h3>
-								<p>An agile robot equiped with gripper capable of picking a payload of 0.6 lbs.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/S900V2.png" alt="" /></a>
-								<h3>S900 V2</h3>
-								<p>Iterated the Design of DJI S900 from a hexacopter to a quadcopter configuration increasing the flight time. Developed a custom propeller mounting design for DJI 4114 pro motors thus increasing the propeller diameter size by 2 inches.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/05.jpg" class="image fit thumb"><img src="images/smartclean.JPG" alt="" /></a>
-								<h3>Nunc enim commodo aliquet</h3>
-								<p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/zues.JPG" alt="" /></a>
-								<h3>Zues</h3>
-								<p>Developed a drone having a 1:1 drone weight to payload weight ratio. Performed autonomous mission in Rotorcraft 2024 event conducted by NITTE University securing the highest score.</p>
-							</article>
-                            <article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/ugv.JPG" alt="" /></a>
-								<h3>Remotely Operated Vehicle</h3>
-								<p>Designed and developed a 6-thruster ROV measuring under 300x300x200mm. Implemented automatic resurfacing for safety and ease of operation via tether. Demonstrated the ROV’s diving and traversing capabilities</p>
-							</article>
-							<article class="col-6 col-12-xsmall work-item">
-								<a href="images/fulls/06.jpg" class="image fit thumb"><img src="images/spiderbot.png" alt="" /></a>
-								<h3>Spiderbot</h3>
-								<p>Developed kinematics and control systems for robotic leg movement. Designed the internal circuit, integrating microcontrollers with sensors and wireless transmission modules.</p>
-							</article>
-						</div>
-						
-					</section>
+	<div class="side-element side-right">
+		<a href="mailto:tarun002kumar@gmail.com" class="email-link">tarun002kumar@gmail.com</a>
+	</div>
 
+	<!-- Video Hero Section -->
+	<header id="header" class="video-hero">
+		<!-- Video Background -->
+		<div class="video-background">
+			<!-- Google Drive Video - Replace VIDEO_FILE_ID with your file ID -->
+			<!-- To get the file ID: Share video on Google Drive > Anyone with link > Copy link -->
+			<!-- Link format: https://drive.google.com/file/d/VIDEO_FILE_ID/view -->
+			<iframe src="https://drive.google.com/file/d/VIDEO_FILE_ID/preview" allow="autoplay" class="gdrive-video"
+				frameborder="0">
+			</iframe>
+			<!-- Dark Overlay -->
+			<div class="video-overlay"></div>
+		</div>
 
-				<!-- three -->
-				<section id="three">
-					<h2>CERTIFICATIONS</h2>
-					<div class="row">
-						<article class="col-6 col-12-xsmall work-item">
-							<a  class="image fit thumb"><img src="certifications/mechd.png" alt="" /></a>
-							<h3>Certified Solidworks Associate in Mechanical Design, by Dassault Systems (2023)</h3>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a  class="image fit thumb"><img src="certifications/elec.png" alt="" /></a>
-							<h3>Certified Solidworks Associate in Electrical, by Dassault Systems (2023)</h3>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a  class="image fit thumb"><img src="certifications/addm.png" alt="" /></a>
-							<h3>Certified Solidworks Associate in Additive Manufacturing, by Dassault Systems (2023)</h3>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a  class="image fit thumb"><img src="certifications/nptel.png" alt="" /></a>
-							<h3>Internet of things by Indian Institute of Technology, Kharagpur from NPTEL (2022)</h3>
-						</article>
-						
-					</div>
+		<!-- Hero Content - Centered -->
+		<div class="video-hero-content">
+			<p class="hero-intro">Hi, my name is</p>
+			<h1 class="hero-name">Tarunkumar Palanivelan.</h1>
+			<h2 class="hero-tagline">Mechatronics & Robotics Engineer</h2>
+			<p class="hero-subtitle">
+				Building autonomous UAVs, UGVs, and robotic systems at <span class="highlight">NYU ARPL</span>
+			</p>
+			<a href="#one" class="hero-cta-minimal">
+				Explore My Work <i class="fas fa-chevron-down"></i>
+			</a>
+		</div>
 
-				</section>
+		<!-- Scroll Indicator -->
+		<div class="scroll-indicator">
+			<div class="scroll-line"></div>
+		</div>
+	</header>
 
+	<!-- About Section -->
+	<section id="one" class="reveal">
+		<h2 class="numbered-heading" data-num="01.">About Me</h2>
 
+		<div class="about-grid">
+			<div class="about-content">
+				<p>
+					Hello! I'm Tarun, a robotics engineer with a passion for creating autonomous systems that push the
+					boundaries of what's possible. My journey in robotics started with building drones and has evolved
+					into designing complex UAV/UGV hybrid systems.
+				</p>
+				<p>
+					Currently, I'm pursuing my <strong style="color: var(--slate-bright);">Master's in Mechatronics and
+						Robotics</strong> at <a href="https://engineering.nyu.edu/" target="_blank"
+						class="link-fancy">NYU Tandon School of Engineering</a>, where I'm also a Graduate Research
+					Assistant at the Agile Robotics Lab working on quadrotor perception systems.
+				</p>
+				<p>Here are some technologies I've been working with:</p>
 
-				<!-- Three half -->
-				<section id="three half">
-					<h2>COMPETITIONS AND ACHIEVEMENTS</h2>
-					<div class="row">
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="reconfig.html" class="image fit thumb"><img src="images/comp/vay.jpg" alt="" /></a>
-							<h3>Vayurvya 2024</h3>
-							<p>An autonomous robot designed to reconfigure its configuration based on the environmental situation.</p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/02.jpg" class="image fit thumb"><img src="images/comp/wrc.jpg" alt="" /></a>
-							<h3>World Robotics Championship 2023</h3>
-							<p>A high altitude drone capable of reaching a height of half a miles with a payload of 11 lbs. .</p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/03.jpg" class="image fit thumb"><img src="images/comp/sae.jpg" alt="" /></a>
-							<h3>SAE Aerothon 2022</h3>
-							<p>An agile robot equiped with gripper capable of picking a payload of 0.6 lbs.</p>
-						</article>
-						<article class="col-6 col-12-xsmall work-item">
-							<a href="images/fulls/04.jpg" class="image fit thumb"><img src="images/comp/yes.png" alt="" /></a>
-							<h3>Yesist12 - IC track</h3>
-							<p>A redesign of the DJI S900 drone, replacing to quadcopter and custom propeller mounts.</p>
-						</article>
-						
-				</section>
-
-				<section id="quater">
-					<h2>EXPERIENCE</h2>
-
-					<div class="row">
-					<div class="col-12 col-12-xsmall">
-					   
-						
-						<ul class="alt">
-						  
-							<li>Agile Robotics and Perception Lab, New York University</li>
-							<h5>Graduate Research Assistant </h5>
-							<p>Conducted inertial measurement testing of quadrotors using Vicon motion capture, analyzing moments along each axis to evaluate dynamic performance and stability
-								<br>
-								Engaged in safety piloting of quadrotors, ensuring controlled operations with safety protocols
-								<br>
-								Designed CAD components and assemblies for the quadrotor platform, calibrated PX4, and integrated it with Jetson Orin for autonomous operations</p>
-								
-							<div class="row">	
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="reconfig.html" class="image fit thumb"><img src="images/arpl.PNG" alt="" /></a>
-								</article>
-							</div>
-
-							<li>Garuda Aerospace, Chennai</li>
-							<h5>Manufacturing and Assembly Intern </h5>
-							<p>Assembled and tested agricultural drones under 25 kg, conducting quality inspections prior to flight testing
-								<br>
-								Engaged in mapping and path planning using QGroundControl for the Droni surveillance drone, performing pre-flight protocols and inspection checks before each flight test
-							<div class="row">	
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="reconfig.html" class="image fit thumb"><img src="images/gafly.jpeg" alt="" /></a>
-								</article>
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="reconfig.html" class="image fit thumb"><img src="images/gadrone.jpg" alt="" /></a>
-								</article>
-							</div>
-
-							<li>Aerospace Systems Research Laboratory, SRM Chennai</li>
-							<h5>Team Lead </h5>
-							<p>Led a team of 40 in drone design, material selection, and fabrication, overseeing development for competitions and projects
-								<br>
-								Directed the High-Maneuverability Drones category at the ‘World Robotics Championship’ by Technoxian, focusing on acrobatics and FPV drones
-								<br>
-								Collaborated with startups and corporate sponsors to present projects at tech expos to government and industry representatives
-							<div class="row">	
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="reconfig.html" class="image fit thumb"><img src="images/asrl1.jpeg" alt="" /></a>
-								</article>
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="reconfig.html" class="image fit thumb"><img src="images/asrl2.png" alt="" /></a>
-								</article>
-							</div>
-
-							<li>My Equation (formerly TechAnalogy)</li>
-							<h5>Head of Industrial Design (Virtual Internship) </h5>
-							<p>
-								Led engineering design activities, documentation, and project analysis for efficiency and cost-effectiveness
-								<br>
-								Developed prototypes using CAD and computer-assisted engineering for EV based project
-								<br>
-								Mentored students across India in CAD software, analysis, and design engineering through an online platform
-								<br>
-								Served as Design Speaker, Mentor, and Technical Assistant for the workshop Robonetics 2.0
-							<div class="row">	
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="" class="image fit thumb"><img src="certifications/tatech.png" alt="" /></a>
-								</article>
-								<article class="col-6 col-12-xsmall work-item">
-									<a href="" class="image fit thumb"><img src="certifications/taintern.png" alt="" /></a>
-								</article>
-							</div>
-						</ul>
-					</div>
-				</div>
-				</section>
-
-				<!-- Three -->
-					<section id="four">
-						<h2>Get In Touch</h2>
-						<div class="row">
-							<div class="col-8 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-										<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-										<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="4"></textarea></div>
-									</div>
-								</form>
-								<ul class="actions">
-									<li><input type="submit" value="Send Message" /></li>
-								</ul>
-							</div>
-							<div class="col-4 col-12-small">
-								<ul class="labeled-icons">
-									<li>
-										<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
-										96 Vermont St.<br />
-										Brooklyn, NY 11207<br />
-										United States
-									</li>
-									<li>
-										<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
-										+1 347 513 9454
-									</li>
-									<li>
-										<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
-										<a href="#">tarun002kumar@gmail.com</a>
-									</li>
-								</ul>
-							</div>
-						</div>
-					</section>
-
-				<!-- Four -->
-				<!--
-					<section id="four half">
-						<h2>Elements</h2>
-
-						<section>
-							<h4>Text</h4>
-							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-							<hr />
-							<header>
-								<h4>Heading with a Subtitle</h4>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<header>
-								<h5>Heading with a Subtitle</h5>
-								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-							</header>
-							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-							<hr />
-							<h2>Heading Level 2</h2>
-							<h3>Heading Level 3</h3>
-							<h4>Heading Level 4</h4>
-							<h5>Heading Level 5</h5>
-							<h6>Heading Level 6</h6>
-							<hr />
-							<h5>Blockquote</h5>
-							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-							<h5>Preformatted</h5>
-							<pre><code>i = 0;
-
-							while (!deck.isInOrder()) {
-							print 'Iteration ' + i;
-							deck.shuffle();
-							i++;
-							}
-
-							print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-						</section>
-
-						<section>
-							<h4>Lists</h4>
-							<div class="row">
-								<div class="col-6 col-12-xsmall">
-									<h5>Unordered</h5>
-									<ul>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-									<h5>Alternate</h5>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Sagittis adipiscing lorem eleifend.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-xsmall">
-									<h5>Ordered</h5>
-									<ol>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-										<li>Dolor pulvinar etiam magna etiam.</li>
-										<li>Etiam vel felis at lorem sed viverra.</li>
-										<li>Felis enim feugiat dolore viverra.</li>
-									</ol>
-									<h5>Icons</h5>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-									</ul>
-								</div>
-							</div>
-							<h5>Actions</h5>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Default</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions small">
-								<li><a href="#" class="button primary small">Small</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<div class="row">
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small">Small</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary fit">Default</a></li>
-										<li><a href="#" class="button fit">Default</a></li>
-									</ul>
-								</div>
-								<div class="col-6 col-12-small">
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary small fit">Small</a></li>
-										<li><a href="#" class="button small fit">Small</a></li>
-									</ul>
-								</div>
-							</div>
-						</section>
-
-						<section>
-							<h4>Table</h4>
-							<h5>Default</h5>
-							<div class="table-wrapper">
-								<table>
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-
-							<h5>Alternate</h5>
-							<div class="table-wrapper">
-								<table class="alt">
-									<thead>
-										<tr>
-											<th>Name</th>
-											<th>Description</th>
-											<th>Price</th>
-										</tr>
-									</thead>
-									<tbody>
-										<tr>
-											<td>Item One</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Two</td>
-											<td>Vis ac commodo adipiscing arcu aliquet.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Three</td>
-											<td> Morbi faucibus arcu accumsan lorem.</td>
-											<td>29.99</td>
-										</tr>
-										<tr>
-											<td>Item Four</td>
-											<td>Vitae integer tempus condimentum.</td>
-											<td>19.99</td>
-										</tr>
-										<tr>
-											<td>Item Five</td>
-											<td>Ante turpis integer aliquet porttitor.</td>
-											<td>29.99</td>
-										</tr>
-									</tbody>
-									<tfoot>
-										<tr>
-											<td colspan="2"></td>
-											<td>100.00</td>
-										</tr>
-									</tfoot>
-								</table>
-							</div>
-						</section>
-
-						<section>
-							<h4>Buttons</h4>
-							<ul class="actions">
-								<li><a href="#" class="button primary">Primary</a></li>
-								<li><a href="#" class="button">Default</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button large">Large</a></li>
-								<li><a href="#" class="button">Default</a></li>
-								<li><a href="#" class="button small">Small</a></li>
-							</ul>
-							<ul class="actions fit">
-								<li><a href="#" class="button primary fit">Fit</a></li>
-								<li><a href="#" class="button fit">Fit</a></li>
-							</ul>
-							<ul class="actions fit small">
-								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-								<li><a href="#" class="button fit small">Fit + Small</a></li>
-							</ul>
-							<ul class="actions">
-								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-							</ul>
-							<ul class="actions">
-								<li><span class="button primary disabled">Primary</span></li>
-								<li><span class="button disabled">Default</span></li>
-							</ul>
-						</section>
-
-						<section>
-							<h4>Form</h4>
-							<form method="post" action="#">
-								<div class="row gtr-uniform gtr-50">
-									<div class="col-6 col-12-xsmall">
-										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-									</div>
-									<div class="col-6 col-12-xsmall">
-										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-									</div>
-									<div class="col-12">
-										<select name="demo-category" id="demo-category">
-											<option value="">- Category -</option>
-											<option value="1">Manufacturing</option>
-											<option value="1">Shipping</option>
-											<option value="1">Administration</option>
-											<option value="1">Human Resources</option>
-										</select>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-										<label for="demo-priority-low">Low Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-normal" name="demo-priority">
-										<label for="demo-priority-normal">Normal Priority</label>
-									</div>
-									<div class="col-4 col-12-small">
-										<input type="radio" id="demo-priority-high" name="demo-priority">
-										<label for="demo-priority-high">High Priority</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-copy" name="demo-copy">
-										<label for="demo-copy">Email me a copy of this message</label>
-									</div>
-									<div class="col-6 col-12-small">
-										<input type="checkbox" id="demo-human" name="demo-human" checked>
-										<label for="demo-human">I am a human and not a robot</label>
-									</div>
-									<div class="col-12">
-										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-									</div>
-									<div class="col-12">
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</div>
-								</div>
-							</form>
-						</section>
-
-						<section>
-							<h4>Image</h4>
-							<h5>Fit</h5>
-							<div class="box alt">
-								<div class="row gtr-50 gtr-uniform">
-									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
-									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
-								</div>
-							</div>
-							<h5>Left &amp; Right</h5>
-							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-						</section>
-
-					</section>
-				-->
-
+				<ul class="skills-list">
+					<li>ROS / ROS2</li>
+					<li>PX4 Autopilot</li>
+					<li>SolidWorks</li>
+					<li>Python & C++</li>
+					<li>Computer Vision</li>
+					<li>SLAM & Navigation</li>
+					<li>Embedded Systems</li>
+					<li>3D Printing</li>
+				</ul>
 			</div>
 
-		<!-- Footer -->
-			<footer id="footer">
-				
-			</footer>
+			<div class="about-image">
+				<div class="about-image-wrapper">
+					<img src="images/profile1.jpg" alt="Tarunkumar Palanivelan profile" />
+				</div>
+			</div>
+		</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+		<!-- Stats -->
+		<div class="stats-grid">
+			<div class="stat-card fade-up">
+				<div class="stat-number">8+</div>
+				<div class="stat-label">Projects Built</div>
+			</div>
+			<div class="stat-card fade-up">
+				<div class="stat-number">4+</div>
+				<div class="stat-label">Competitions</div>
+			</div>
+			<div class="stat-card fade-up">
+				<div class="stat-number">40+</div>
+				<div class="stat-label">Team Members Led</div>
+			</div>
+			<div class="stat-card fade-up">
+				<div class="stat-number">3</div>
+				<div class="stat-label">Certifications</div>
+			</div>
+		</div>
+	</section>
 
-	</body>
+	<!-- Experience Section -->
+	<section id="quater" class="reveal">
+		<h2 class="numbered-heading" data-num="02.">Where I've Worked</h2>
+
+		<div class="experience-tabs">
+			<div class="tab-list" role="tablist">
+				<button class="tab-button active" data-tab="0">NYU ARPL</button>
+				<button class="tab-button" data-tab="1">Garuda Aerospace</button>
+				<button class="tab-button" data-tab="2">ASRL SRM</button>
+				<button class="tab-button" data-tab="3">My Equation</button>
+				<div class="tab-highlight"></div>
+			</div>
+
+			<div class="tab-content">
+				<div class="job-panel active" data-panel="0">
+					<h3 class="job-title">Graduate Research Assistant @ <span class="company">NYU ARPL</span></h3>
+					<p class="job-duration">August 2024 - Present</p>
+					<ul class="job-description">
+						<li>Conducting quadrotor inertial measurement testing using Vicon motion capture systems</li>
+						<li>Developing PX4 calibration procedures and Jetson Orin integration for autonomous operations
+						</li>
+						<li>Implementing computer vision pipelines for real-time object detection and tracking</li>
+						<li>Contributing to research on agile flight and perception algorithms</li>
+					</ul>
+				</div>
+
+				<div class="job-panel" data-panel="1">
+					<h3 class="job-title">Manufacturing & Assembly Intern @ <span class="company">Garuda
+							Aerospace</span></h3>
+					<p class="job-duration">June 2023 - August 2023</p>
+					<ul class="job-description">
+						<li>Assembled and tested agricultural drones for precision farming applications</li>
+						<li>Configured QGroundControl for autonomous path planning and surveillance missions</li>
+						<li>Performed quality assurance testing on drone components and systems</li>
+						<li>Collaborated with engineering team on manufacturing process improvements</li>
+					</ul>
+				</div>
+
+				<div class="job-panel" data-panel="2">
+					<h3 class="job-title">Team Lead @ <span class="company">Aerospace Systems Research Lab</span></h3>
+					<p class="job-duration">January 2022 - May 2024</p>
+					<ul class="job-description">
+						<li>Led a team of 40+ members in drone design, fabrication, and testing</li>
+						<li>Directed High-Maneuverability Drone project at World Robotics Championship 2023</li>
+						<li>Managed project timelines, resource allocation, and technical documentation</li>
+						<li>Mentored junior team members in CAD design and embedded systems</li>
+					</ul>
+				</div>
+
+				<div class="job-panel" data-panel="3">
+					<h3 class="job-title">Head of Industrial Design @ <span class="company">My Equation</span></h3>
+					<p class="job-duration">March 2021 - December 2022</p>
+					<ul class="job-description">
+						<li>Led engineering design initiatives for educational robotics products</li>
+						<li>Provided CAD mentorship to students across India through online workshops</li>
+						<li>Developed curriculum for mechanical design and 3D printing courses</li>
+						<li>Created technical documentation and design guidelines for the organization</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Projects Section -->
+	<section id="two" class="reveal">
+		<h2 class="numbered-heading" data-num="03.">Projects</h2>
+
+		<!-- Two Column Layout -->
+		<div class="projects-two-column">
+			<!-- Left Column: Featured Projects -->
+			<div class="featured-projects-column">
+				<h3 class="column-heading">Some Things I've Built</h3>
+
+				<!-- Featured Project 1 -->
+				<div class="featured-project-compact fade-up">
+					<div class="project-image-small">
+						<a href="reconfig.html">
+							<img src="images/UAVUGV.png" alt="Reconfigurable UAV+UGV" />
+						</a>
+					</div>
+					<div class="project-info">
+						<h4><a href="reconfig.html">Reconfigurable UAV+UGV</a></h4>
+						<p>A morphing drone that transforms into a ground vehicle. FEA stress testing, CFD simulation,
+							and topology optimization.</p>
+						<div class="project-tech-tags">
+							<span>SolidWorks</span><span>ANSYS</span><span>CFD</span><span>3D Printing</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Featured Project 2 -->
+				<div class="featured-project-compact fade-up">
+					<div class="project-image-small">
+						<a href="#">
+							<img src="images/Phoenix.png" alt="Phoenix Drone" />
+						</a>
+					</div>
+					<div class="project-info">
+						<h4><a href="#">Phoenix</a></h4>
+						<p>High altitude autonomous drone with 11lbs payload. Custom Molicel battery pack. Tested at 0.6
+							mile altitude.</p>
+						<div class="project-tech-tags">
+							<span>PX4</span><span>GPS Navigation</span><span>Carbon Fiber</span>
+						</div>
+					</div>
+				</div>
+
+				<!-- Featured Project 3 -->
+				<div class="featured-project-compact fade-up">
+					<div class="project-image-small">
+						<a href="#">
+							<img src="images/zues.JPG" alt="Zeus Drone" />
+						</a>
+					</div>
+					<div class="project-info">
+						<h4><a href="#">Zeus</a></h4>
+						<p>Competition-winning drone with 1:1 weight to payload ratio. Winner at Rotorcraft 2024 at
+							NITTE University.</p>
+						<div class="project-tech-tags">
+							<span>Frame Design</span><span>Motor Selection</span><span>PID Tuning</span>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!-- Right Column: Other Projects -->
+			<div class="other-projects-column">
+				<h3 class="column-heading">Other Noteworthy Projects</h3>
+
+				<div class="project-card-compact fade-up">
+					<i class="fas fa-folder"></i>
+					<h4>Osprey</h4>
+					<p>Agile aerial robot with integrated gripper system capable of picking 0.6 lbs payload.</p>
+					<span class="tech-footer">SolidWorks · Servo Control</span>
+				</div>
+
+				<div class="project-card-compact fade-up">
+					<i class="fas fa-folder"></i>
+					<h4>S900 V2</h4>
+					<p>Complete redesign of DJI S900 from hexacopter to quadcopter configuration.</p>
+					<span class="tech-footer">CAD Redesign · Motor Integration</span>
+				</div>
+
+				<div class="project-card-compact fade-up">
+					<i class="fas fa-folder"></i>
+					<h4>Underwater ROV</h4>
+					<p>6-thruster remotely operated vehicle with automatic resurfacing safety system.</p>
+					<span class="tech-footer">Waterproofing · Thrusters</span>
+				</div>
+
+				<div class="project-card-compact fade-up">
+					<i class="fas fa-folder"></i>
+					<h4>Spiderbot</h4>
+					<p>Multi-legged walking robot with custom inverse kinematics implementation.</p>
+					<span class="tech-footer">Kinematics · Servo Control</span>
+				</div>
+
+				<div class="project-card-compact fade-up">
+					<i class="fas fa-folder"></i>
+					<h4>Smart Clean</h4>
+					<p>Autonomous floor cleaning robot with intelligent navigation and obstacle avoidance.</p>
+					<span class="tech-footer">Navigation · Sensors</span>
+				</div>
+
+				<div class="project-card-compact fade-up">
+					<i class="fas fa-folder"></i>
+					<h4>Drone Swarm Research</h4>
+					<p>Multi-agent coordination and formation control for drone swarms.</p>
+					<span class="tech-footer">ROS2 · Multi-Agent</span>
+				</div>
+			</div>
+		</div>
+
+		<!-- 3D Model Showcase - Disabled (model file too large for GitHub)
+		<div class="model-showcase fade-up">
+			<h3 style="text-align: center; margin-top: 80px; margin-bottom: 20px; color: var(--slate-light);">
+				Interactive 3D Model</h3>
+			<p style="text-align: center; color: var(--slate); margin-bottom: 30px;">WRC Competition Drone - Drag to
+				rotate, scroll to zoom</p>
+			<div class="model-viewer" data-model="models/WRC.glb" data-auto-rotate="true"></div>
+		</div>
+		-->
+	</section>
+
+	<!-- Certifications Section -->
+	<section id="three" class="reveal">
+		<h2 class="numbered-heading" data-num="04.">Certifications</h2>
+
+		<div class="certifications-grid">
+			<div class="cert-card fade-up">
+				<img src="certifications/mechd.png" alt="CSWA Mechanical Design" />
+				<div class="cert-card-content">
+					<h4>CSWA - Mechanical Design</h4>
+					<p>Dassault Systems · 2023</p>
+				</div>
+			</div>
+
+			<div class="cert-card fade-up">
+				<img src="certifications/elec.png" alt="CSWA Electrical" />
+				<div class="cert-card-content">
+					<h4>CSWA - Electrical</h4>
+					<p>Dassault Systems · 2023</p>
+				</div>
+			</div>
+
+			<div class="cert-card fade-up">
+				<img src="certifications/addm.png" alt="CSWA Additive Manufacturing" />
+				<div class="cert-card-content">
+					<h4>CSWA - Additive Manufacturing</h4>
+					<p>Dassault Systems · 2023</p>
+				</div>
+			</div>
+
+			<div class="cert-card fade-up">
+				<img src="certifications/nptel.png" alt="IoT NPTEL" />
+				<div class="cert-card-content">
+					<h4>Internet of Things</h4>
+					<p>IIT Kharagpur · 2022</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!-- Contact Section -->
+	<section id="four" class="reveal">
+		<span class="section-overline">05. What's Next?</span>
+		<h2>Get In Touch</h2>
+		<p>
+			I'm currently looking for full-time opportunities in robotics and autonomous systems. Whether you have a
+			question, a project idea, or just want to say hi, my inbox is always open!
+		</p>
+		<a href="mailto:tarun002kumar@gmail.com" class="contact-button">Say Hello</a>
+	</section>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<ul class="footer-social">
+			<li><a href="https://github.com/tarunkumarnyu" target="_blank"><i class="fab fa-github"></i></a></li>
+			<li><a href="https://linkedin.com/in/tarunkumar-palanivelan" target="_blank"><i
+						class="fab fa-linkedin-in"></i></a></li>
+			<li><a href="mailto:tarun002kumar@gmail.com"><i class="fas fa-envelope"></i></a></li>
+		</ul>
+		<div class="footer-content">
+			<a href="https://github.com/tarunkumarnyu" target="_blank">Designed & Built by Tarunkumar Palanivelan</a>
+		</div>
+	</footer>
+
+	<!-- Animations -->
+	<script src="animations.js"></script>
+
+	<!-- 3D Model Viewer (for project showcase only) -->
+	<script src="model-viewer.js"></script>
+
+</body>
+
 </html>

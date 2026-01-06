@@ -1,135 +1,179 @@
 <!DOCTYPE HTML>
-<!--
-	Strata by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>My Portfolio</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="style2.css" />
-	</head>
-	<body class="is-preload">
+<html lang="en">
 
-		<!-- Header -->
-			<header id="header">
-				<div class="inner">
-					
-					
-				</div>
+<head>
+	<title>Reconfigurable UAV + UGV | Tarunkumar Palanivelan</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<meta name="description"
+		content="Reconfigurable UAV+UGV robot inspired by CalTech M4 Morphbot - designed for search and rescue operations" />
+	<link rel="stylesheet" href="modern-style2.css" />
+</head>
+
+<body class="is-preload">
+
+	<!-- Header -->
+	<header id="header">
+		<div class="inner">
+			<a href="index.html"
+				style="display: inline-flex; align-items: center; gap: 0.5rem; padding: 0.75rem 1.5rem; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 999px; color: #00d4ff; font-weight: 500; backdrop-filter: blur(10px);">
+				<i class="fas fa-arrow-left"></i> Back to Portfolio
+			</a>
+		</div>
+	</header>
+
+	<!-- Main -->
+	<div id="main">
+
+		<!-- Project Content -->
+		<section id="one" class="reveal">
+			<header class="major">
+				<h2 class="gradient-text">RECONFIGURABLE UAV + UGV</h2>
 			</header>
 
-		<!-- Main -->
-			<div id="main">
+			<p>This project draws inspiration from the CalTech M4 Morphbot and is designed to operate in two
+				configurations: UAV (Unmanned Aerial Vehicle) and UGV (Unmanned Ground Vehicle). Its primary purpose is
+				to navigate environments where traditional ground robots face limitations.</p>
 
-				<!-- One -->
-					<section id="one">
-						<header class="major">
-							<h2>RECONFIGURABLE UAV + UGV</h2>
-						</header>
-						<p>This project draws inspiration from the CalTech M4 Morphbot and is designed to operate in two configurations: UAV (Unmanned Aerial Vehicle) and UGV (Unmanned Ground Vehicle). Its primary purpose is to navigate environments where traditional ground robots face limitations.
+			<p>With a focus on search and rescue operations, this robot can autonomously fly to designated search
+				locations for rapid response. Equipped with GPS and telemetry, it enables real-time navigation and
+				monitoring from the ground station. In complex terrains, the UAV seamlessly transitions into a UGV,
+				enhancing maneuverability while significantly reducing power consumption by shifting from a dynamically
+				stable system to a statically stable one.</p>
 
-							With a focus on search and rescue operations, this robot can autonomously fly to designated search locations for rapid response. Equipped with GPS and telemetry, it enables real-time navigation and monitoring from the ground station. In complex terrains, the UAV seamlessly transitions into a UGV, enhancing maneuverability while significantly reducing power consumption by shifting from a dynamically stable system to a statically stable one.
-							
-							Additionally, the robot features an FPV camera and a video transmitter, allowing live video feeds to be relayed to the ground station for enhanced monitoring and manual control.</p>
-							
-							<div class="col-7 col-12-small">
-								<ul class="labeled-icons">
-								  <div class="responsive-iframe-container">
-									<iframe src="https://drive.google.com/file/d/1PNGPZ-Jd1dNvICH0r3fynlAgbtQdFzTJ/preview" 
-									  width="640" height="360">
-									</iframe>
-								  </div>
-								</ul>
-							  </div>
+			<p>Additionally, the robot features an FPV camera and a video transmitter, allowing live video feeds to be
+				relayed to the ground station for enhanced monitoring and manual control.</p>
 
-						<div class="row">
-							<div class="col-5 col-12-small">
-								<form method="post" action="#">
-									<div class="row gtr-uniform gtr-50">
-										<h2>SPECIFICATIONS & DIMENSIONS
-										</h2>
-										<p>Take-off weight =𝟏𝟏𝟑𝟒𝒈 <br><br>
-										The Final thrust required per motor to take-off = 𝟑𝟒𝟎.𝟐𝒈 <br><br>
-										Total power required for the drone to fly 5 𝑚𝑖𝑛𝑠 endurance= 𝟑𝟏.𝟎𝟖𝑾𝒉 <br><br>
-										Estimated Endurance     = 0.070265 ℎ = 𝟒.𝟐𝟏𝟓𝟗 𝒎𝒊𝒏 <br><br>
-										Estimated Payload Limit =  𝟏𝟎𝟎 𝒈𝒓𝒂𝒎𝒔 </p>
-									</div>
-								</form>
-								
-							</div>
-							<div class="col-7 col-12-small">
-								<ul class="labeled-icons">
-									<br><br>
-									<a class="image fit thumb"><img src="images/sizing.png" alt="" /></a>
-									
-								</ul>
-							</div>
-						</div>
-						<h2>SYSTEM OVERVIEW</h2>
-						<p>The drone can switch between aerial mode and ground mode. It possesses a total of 8 actuators which includes 2 DC motors
-							which is used for actuating wheels in UGV mode, 2 servo motors which aids in reconfiguration process from UGV to UAV vice versa, 4 BLDC motors for actuating in UAV mode.
-							The drone weights approximately 1.2 kg with all components including electronics. The Drone measures 310 mm in length and 230 mm in height. Wheel has a diameter of 150 mm.
-							<br>
-							motor mount (horizontal dist.) And diagonal wheelbase distance is 225mm. To prevent propeller collisions, we must have safe spacing between two propellers. Considering this factor the propeller clearance is taken as 33mm. The landing gear is 50mm in height which is providing us the required ground clearance and the design. It is designed to be smaller than the radius of the outer wheel thus not disturbing the ground motion. There is a clearance of 15 mm between the landing gear and the ground during the ground motion.
-							The chassis structures are primarily 3D printed using PLA+ and Carbon fibre is used in centre part of the chassis for its light weight properties.
-						</p>
-						<a class="image fit thumb"><img src="images/Conf.png" alt="" /></a>
-						<h2>SYSTEM ARCHITECTURE</h2>
-						<p>
-							A 1200 VTL 5MP camera is used to provide live first person view footage with video being transmitted to the ground station through a 5.8GHz frequency band.
-							A STM32F405 arm microcontroller used as the controller for flight, enabled with 6 UART for peripherals. For motion in the Ground, an Atmega328 based board is used. A common Ground control station enabled with a First person View Display, Video Receiver and Radio controls. A 4 in 1 integrated 55A Electronics speed controlled is used thus drastically reducing the weight to 15g. DPS310 Barometer is used to maintain constant altitude for altitude hold mode. In order to maintain precise position, Ublox NEO-M8N is used for GPS positioning and Navigation having accuracy between 0.6 and 0.9 meters, connected to the Flight controller’s UART6. A compass module is used to guide the direction for navigation between waypoints and is connected to the flight controller through I2C protocol. A 2.4GHz receiver is connected to UART2 of the flight controller following the SBUS protocol.
-							Battery and Power Management
-							The X is designed to maintain battery efficiency along with a decent flight time. Thus a 1350mAH lithium ion battery is used for its weight factor. A 6 cell battery is used thus providing 25.2 volts to the electronics speed controlled as required. It is step downed to 12 volts using a LM2596S Buck converter to H-Bridge Motor driver for Ground Drive. A secondary XL4005 Buck converter is used to convert the Battery supply to 7.2 volts with constant 5A as per the Servo motor requirement.
-						</p>
-						<a class="image fit thumb"><img src="images/Architecture.png" alt="" /></a>
-						<h2>STRUCTURAL DESIGN</h2>
-						<p>
-							The frame mainly comprises of 3 major structural design. The central body, the motor mount beams, wheels. The central body is designed to encompass the flight controller along with other electronics. Being at the centre, in order to maintain the most perfect centre of gravity, the battery is secured to the central body.
-							The Motor mount beams run parallel to the central body in both the sides. They are connected by the servo motor’s attachment. These are designed to secure the motor at the same time provide structural stability due to the vibrations by the motor. The mounting holes are further connected to a bearing attachment which secures the bearing’s inner surface as shown in fig.
-						</p>
-						<a class="image fit thumb"><img src="images/bearing.png" alt="" /></a>
-						<p>
-							The Wheel and the beam is connected through bearing in order to prevent friction during ground motion. Since two wheels are to be driven through a single DC motor, a common gear is used to drive the gears in each wheel. Therefore Wheels are designed integrating gear teeth's to the outer structure, achieving a gear ratio of 1:10 therefore having a higher torque to driving the structure in the compromise of speed. The Wheels are topology optimised in order to reduce material maintaining the structural stability at the same time reducing drag created by the structure.
-						</p>
-						
+			<!-- Video -->
+			<div class="responsive-iframe-container">
+				<iframe src="https://drive.google.com/file/d/1PNGPZ-Jd1dNvICH0r3fynlAgbtQdFzTJ/preview"
+					allowfullscreen></iframe>
+			</div>
 
-						<div class="row">
-							<div class="col-6 col-12-small">
-								<a class="image fit thumb"><img src="images/wheel.png" alt="" /></a>
-							</div>
-							<div class="col-6 col-12-small">
-									<a class="image fit thumb"><img src="images/topology.png" alt="" /></a>
-							</div>
-						</div>
-
-					</section>
-
-
-		<!-- Footer -->
-			<footer id="footer">
-				<div class="inner">
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-					<ul class="copyright">
-						<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+			<!-- Specifications -->
+			<div class="row">
+				<div class="col-5 col-12-small">
+					<h2>SPECIFICATIONS & DIMENSIONS</h2>
+					<ul class="alt" style="list-style: none; padding: 0;">
+						<li style="border: none; padding: 0.5rem 0;">
+							<strong style="color: #00d4ff;">Take-off weight:</strong> 1134g
+						</li>
+						<li style="border: none; padding: 0.5rem 0;">
+							<strong style="color: #00d4ff;">Thrust per motor:</strong> 340.2g
+						</li>
+						<li style="border: none; padding: 0.5rem 0;">
+							<strong style="color: #00d4ff;">Power required:</strong> 31.08Wh
+						</li>
+						<li style="border: none; padding: 0.5rem 0;">
+							<strong style="color: #00d4ff;">Estimated Endurance:</strong> 4.21 min
+						</li>
+						<li style="border: none; padding: 0.5rem 0;">
+							<strong style="color: #00d4ff;">Payload Limit:</strong> 100 grams
+						</li>
 					</ul>
 				</div>
-			</footer>
+				<div class="col-7 col-12-small">
+					<a class="image fit thumb"><img src="images/sizing.png" alt="Robot Dimensions" /></a>
+				</div>
+			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.poptrox.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+			<!-- System Overview -->
+			<h2>SYSTEM OVERVIEW</h2>
+			<p>The drone can switch between aerial mode and ground mode. It possesses a total of 8 actuators which
+				includes 2 DC motors which is used for actuating wheels in UGV mode, 2 servo motors which aids in
+				reconfiguration process from UGV to UAV vice versa, 4 BLDC motors for actuating in UAV mode.</p>
 
-	</body>
+			<p>The drone weights approximately 1.2 kg with all components including electronics. The Drone measures 310
+				mm in length and 230 mm in height. Wheel has a diameter of 150 mm. Motor mount (horizontal dist.) and
+				diagonal wheelbase distance is 225mm. To prevent propeller collisions, we must have safe spacing between
+				two propellers. Considering this factor the propeller clearance is taken as 33mm. The landing gear is
+				50mm in height which is providing us the required ground clearance and the design. It is designed to be
+				smaller than the radius of the outer wheel thus not disturbing the ground motion. There is a clearance
+				of 15 mm between the landing gear and the ground during the ground motion. The chassis structures are
+				primarily 3D printed using PLA+ and Carbon fibre is used in centre part of the chassis for its light
+				weight properties.</p>
+
+			<a class="image fit thumb"><img src="images/Conf.png" alt="Configuration Modes" /></a>
+
+			<!-- System Architecture -->
+			<h2>SYSTEM ARCHITECTURE</h2>
+			<p>A 1200 VTL 5MP camera is used to provide live first person view footage with video being transmitted to
+				the ground station through a 5.8GHz frequency band. A STM32F405 arm microcontroller used as the
+				controller for flight, enabled with 6 UART for peripherals. For motion in the Ground, an Atmega328 based
+				board is used. A common Ground control station enabled with a First person View Display, Video Receiver
+				and Radio controls. A 4 in 1 integrated 55A Electronics speed controlled is used thus drastically
+				reducing the weight to 15g.</p>
+
+			<p>DPS310 Barometer is used to maintain constant altitude for altitude hold mode. In order to maintain
+				precise position, Ublox NEO-M8N is used for GPS positioning and Navigation having accuracy between 0.6
+				and 0.9 meters, connected to the Flight controller's UART6. A compass module is used to guide the
+				direction for navigation between waypoints and is connected to the flight controller through I2C
+				protocol. A 2.4GHz receiver is connected to UART2 of the flight controller following the SBUS protocol.
+			</p>
+
+			<p><strong style="color: #00d4ff;">Battery and Power Management:</strong> The X is designed to maintain
+				battery efficiency along with a decent flight time. Thus a 1350mAH lithium ion battery is used for its
+				weight factor. A 6 cell battery is used thus providing 25.2 volts to the electronics speed controlled as
+				required. It is step downed to 12 volts using a LM2596S Buck converter to H-Bridge Motor driver for
+				Ground Drive. A secondary XL4005 Buck converter is used to convert the Battery supply to 7.2 volts with
+				constant 5A as per the Servo motor requirement.</p>
+
+			<a class="image fit thumb"><img src="images/Architecture.png" alt="System Architecture" /></a>
+
+			<!-- Structural Design -->
+			<h2>STRUCTURAL DESIGN</h2>
+			<p>The frame mainly comprises of 3 major structural design. The central body, the motor mount beams, wheels.
+				The central body is designed to encompass the flight controller along with other electronics. Being at
+				the centre, in order to maintain the most perfect centre of gravity, the battery is secured to the
+				central body.</p>
+
+			<p>The Motor mount beams run parallel to the central body in both the sides. They are connected by the servo
+				motor's attachment. These are designed to secure the motor at the same time provide structural stability
+				due to the vibrations by the motor. The mounting holes are further connected to a bearing attachment
+				which secures the bearing's inner surface.</p>
+
+			<a class="image fit thumb"><img src="images/bearing.png" alt="Bearing Design" /></a>
+
+			<p>The Wheel and the beam is connected through bearing in order to prevent friction during ground motion.
+				Since two wheels are to be driven through a single DC motor, a common gear is used to drive the gears in
+				each wheel. Therefore Wheels are designed integrating gear teeth's to the outer structure, achieving a
+				gear ratio of 1:10 therefore having a higher torque to driving the structure in the compromise of speed.
+				The Wheels are topology optimised in order to reduce material maintaining the structural stability at
+				the same time reducing drag created by the structure.</p>
+
+			<div class="row">
+				<div class="col-6 col-12-small">
+					<a class="image fit thumb"><img src="images/wheel.png" alt="Wheel Design" /></a>
+				</div>
+				<div class="col-6 col-12-small">
+					<a class="image fit thumb"><img src="images/topology.png" alt="Topology Optimization" /></a>
+				</div>
+			</div>
+
+		</section>
+
+	</div>
+
+	<!-- Footer -->
+	<footer id="footer">
+		<div class="inner">
+			<ul class="icons">
+				<li><a href="https://github.com/tarunkumarnyu" target="_blank" class="icon brands fa-github"><span
+							class="label">Github</span></a></li>
+				<li><a href="https://linkedin.com/in/tarunkumar-palanivelan" target="_blank"
+						class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+				<li><a href="mailto:tarun002kumar@gmail.com" class="icon solid fa-envelope"><span
+							class="label">Email</span></a></li>
+			</ul>
+			<ul class="copyright">
+				<li>&copy; Tarunkumar Palanivelan 2024</li>
+			</ul>
+		</div>
+	</footer>
+
+	<!-- Scripts -->
+	<script src="animations.js"></script>
+
+</body>
+
 </html>
