@@ -1538,7 +1538,7 @@ section {
 /* Project Card Image */
 .project-card-image {
     position: relative;
-    height: 220px;
+    height: 280px;
     overflow: hidden;
 }
 
@@ -1743,7 +1743,7 @@ section {
     }
 
     .project-card-image {
-        height: 180px;
+        height: 220px;
     }
 }
 
