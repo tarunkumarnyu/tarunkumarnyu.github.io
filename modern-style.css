@@ -1050,6 +1050,309 @@ section {
 }
 
 /* ============================================
+   EXPERIENCE TIMELINE - PREMIUM SLANTED DESIGN
+   ============================================ */
+.experience-timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Central Timeline Line */
+.experience-timeline::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(180deg,
+            transparent 0%,
+            var(--cyan) 10%,
+            var(--cyan) 90%,
+            transparent 100%);
+    opacity: 0.3;
+}
+
+/* Experience Card */
+.experience-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 80px;
+    position: relative;
+    align-items: center;
+}
+
+/* Timeline Dot */
+.experience-card::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: var(--bg-dark);
+    border: 3px solid var(--cyan);
+    border-radius: 50%;
+    z-index: 10;
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+    transition: all 0.3s ease;
+}
+
+.experience-card:hover::before {
+    transform: translate(-50%, -50%) scale(1.3);
+    box-shadow: 0 0 30px rgba(100, 255, 218, 0.6);
+}
+
+/* Slanted Image Container */
+.exp-image-container {
+    position: relative;
+    height: 280px;
+    overflow: hidden;
+    border-radius: 12px;
+    transform: perspective(1000px) rotateY(-5deg) skewY(-2deg);
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow:
+        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 0 0 1px rgba(100, 255, 218, 0.1);
+}
+
+.exp-image-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg,
+            rgba(100, 255, 218, 0.2) 0%,
+            transparent 50%,
+            rgba(100, 255, 218, 0.1) 100%);
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experience-card:hover .exp-image-container {
+    transform: perspective(1000px) rotateY(0deg) skewY(0deg) scale(1.02);
+    box-shadow:
+        0 35px 70px -15px rgba(0, 0, 0, 0.6),
+        0 0 40px rgba(100, 255, 218, 0.2);
+}
+
+.experience-card:hover .exp-image-container::before {
+    opacity: 1;
+}
+
+.exp-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.experience-card:hover .exp-image-container img {
+    transform: scale(1.1);
+}
+
+/* Placeholder for missing images */
+.exp-image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-lighter) 0%, var(--bg-light) 100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.exp-image-placeholder i {
+    font-size: 60px;
+    color: var(--cyan);
+    opacity: 0.4;
+}
+
+.exp-image-placeholder span {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--slate);
+    opacity: 0.6;
+}
+
+/* Experience Content Card */
+.exp-content-card {
+    background: linear-gradient(145deg,
+            rgba(17, 34, 64, 0.9),
+            rgba(29, 53, 87, 0.7));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    padding: 35px;
+    border-radius: 16px;
+    border: 1px solid rgba(100, 255, 218, 0.1);
+    box-shadow:
+        0 20px 40px -15px rgba(2, 12, 27, 0.8),
+        inset 0 1px 0 rgba(100, 255, 218, 0.1);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.exp-content-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: linear-gradient(90deg,
+            transparent 0%,
+            rgba(100, 255, 218, 0.5) 50%,
+            transparent 100%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.experience-card:hover .exp-content-card {
+    transform: translateY(-5px);
+    border-color: rgba(100, 255, 218, 0.3);
+    box-shadow:
+        0 30px 60px -20px rgba(2, 12, 27, 0.9),
+        0 0 30px rgba(100, 255, 218, 0.1);
+}
+
+.experience-card:hover .exp-content-card::before {
+    opacity: 1;
+}
+
+.exp-content-card .job-overline {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--cyan);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 8px;
+}
+
+.exp-content-card .job-title {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--slate-bright);
+    margin-bottom: 5px;
+    font-family: var(--font-display);
+}
+
+.exp-content-card .company-name {
+    font-size: 18px;
+    color: var(--cyan);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.exp-content-card .job-duration {
+    font-family: var(--font-mono);
+    font-size: 13px;
+    color: var(--slate);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.exp-content-card .job-duration i {
+    color: var(--cyan);
+}
+
+.exp-content-card .job-description {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.exp-content-card .job-description li {
+    position: relative;
+    padding-left: 25px;
+    margin-bottom: 12px;
+    font-size: 15px;
+    color: var(--slate);
+    line-height: 1.6;
+}
+
+.exp-content-card .job-description li::before {
+    content: '▹';
+    position: absolute;
+    left: 0;
+    color: var(--cyan);
+    font-size: 14px;
+}
+
+/* Reverse Layout for Alternating Cards */
+.experience-card.reverse {
+    direction: rtl;
+}
+
+.experience-card.reverse>* {
+    direction: ltr;
+}
+
+.experience-card.reverse .exp-image-container {
+    transform: perspective(1000px) rotateY(5deg) skewY(2deg);
+}
+
+.experience-card.reverse:hover .exp-image-container {
+    transform: perspective(1000px) rotateY(0deg) skewY(0deg) scale(1.02);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .experience-card {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .experience-timeline::before {
+        left: 30px;
+    }
+
+    .experience-card::before {
+        left: 30px;
+        top: 140px;
+    }
+
+    .experience-card.reverse {
+        direction: ltr;
+    }
+
+    .exp-image-container,
+    .experience-card.reverse .exp-image-container {
+        transform: none;
+        height: 220px;
+    }
+
+    .experience-card:hover .exp-image-container,
+    .experience-card.reverse:hover .exp-image-container {
+        transform: scale(1.02);
+    }
+}
+
+@media (max-width: 600px) {
+    .experience-timeline::before {
+        display: none;
+    }
+
+    .experience-card::before {
+        display: none;
+    }
+
+    .exp-content-card {
+        padding: 25px;
+    }
+
+    .exp-content-card .job-title {
+        font-size: 22px;
+    }
+}
+
+/* ============================================
    PROJECTS SECTION
    ============================================ */
 #two {
