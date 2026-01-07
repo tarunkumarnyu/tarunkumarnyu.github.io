@@ -1074,14 +1074,14 @@ section {
     opacity: 0.3;
 }
 
-/* Experience Card */
+/* Experience Card - Asymmetrical Layout */
 .experience-card {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 60px;
-    margin-bottom: 80px;
+    grid-template-columns: 1fr 2fr;
+    gap: 50px;
+    margin-bottom: 100px;
     position: relative;
-    align-items: center;
+    align-items: stretch;
 }
 
 /* Timeline Dot */
@@ -1212,14 +1212,14 @@ section {
     opacity: 0.6;
 }
 
-/* Experience Content Card - Larger */
+/* Experience Content Card - Wide 1:2 Ratio */
 .exp-content-card {
     background: linear-gradient(145deg,
             rgba(17, 34, 64, 0.95),
             rgba(29, 53, 87, 0.85));
     backdrop-filter: blur(15px);
     -webkit-backdrop-filter: blur(15px);
-    padding: 40px 45px;
+    padding: 40px 50px;
     border-radius: 20px;
     border: 1px solid rgba(100, 255, 218, 0.15);
     box-shadow:
@@ -1228,7 +1228,9 @@ section {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
-    min-height: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .exp-content-card::before {
@@ -1321,14 +1323,18 @@ section {
 
 /* Reverse Layout for Alternating Cards */
 .experience-card.reverse {
-    direction: rtl;
+    grid-template-columns: 2fr 1fr;
 }
 
-.experience-card.reverse>* {
-    direction: ltr;
+.experience-card.reverse .exp-image-container {
+    order: 2;
 }
 
-/* Reverse layout has same straight images */
+.experience-card.reverse .exp-content-card {
+    order: 1;
+}
+
+/* Reverse layout straight images */
 .experience-card.reverse .exp-image-container {
     transform: none;
 }
