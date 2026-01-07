@@ -953,6 +953,7 @@ section {
 .tab-button {
     display: flex;
     align-items: center;
+    gap: 12px;
     height: var(--tab-height);
     padding: 0 20px;
     font-family: var(--font-mono);
@@ -964,6 +965,21 @@ section {
     transition: var(--transition);
     white-space: nowrap;
     text-align: left;
+}
+
+.tab-button .company-logo {
+    width: 28px;
+    height: 28px;
+    border-radius: 6px;
+    object-fit: cover;
+    border: 1px solid rgba(100, 255, 218, 0.2);
+    transition: var(--transition);
+}
+
+.tab-button:hover .company-logo,
+.tab-button.active .company-logo {
+    border-color: var(--cyan);
+    box-shadow: 0 0 10px rgba(100, 255, 218, 0.3);
 }
 
 .tab-button:hover {
@@ -1056,15 +1072,14 @@ section {
     position: relative;
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 40px;
 }
 
-/* Central Timeline Line */
+/* Left-side Timeline Line */
 .experience-timeline::before {
     content: '';
     position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
+    left: 40px;
     width: 3px;
     height: 100%;
     background: linear-gradient(180deg,
@@ -1076,25 +1091,23 @@ section {
     z-index: 1;
 }
 
-/* Experience Card - 2 Column with gap for timeline */
+/* Experience Card - Timeline on left, full-width content */
 .experience-card {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 80px;
-    margin-bottom: 60px;
+    display: block;
+    margin-bottom: 80px;
     position: relative;
-    align-items: center;
+    padding-left: 60px;
 }
 
-/* Timeline Dot - positioned in the gap between columns */
+/* Timeline Dot - on the left side */
 .experience-card::before {
     content: '';
     position: absolute;
-    left: 50%;
+    left: 32px;
     top: 50%;
-    transform: translate(-50%, -50%);
-    width: 16px;
-    height: 16px;
+    transform: translateY(-50%);
+    width: 18px;
+    height: 18px;
     background: var(--bg-dark);
     border: 3px solid var(--cyan);
     border-radius: 50%;
@@ -1104,20 +1117,20 @@ section {
 }
 
 .experience-card:hover::before {
-    transform: translate(-50%, -50%) scale(1.5);
+    transform: translate(-50%, -50%) scale(1.4);
     box-shadow: 0 0 35px rgba(100, 255, 218, 0.8);
     background: var(--cyan);
 }
 
-/* Image Container - Clean with Animated Border */
+/* Image Container - fixed width column on left */
 .exp-image-container {
     position: relative;
-    height: 320px;
+    height: 280px;
     overflow: hidden;
-    border-radius: 16px;
+    border-radius: 12px;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow:
-        0 25px 50px -12px rgba(0, 0, 0, 0.5),
+        0 20px 40px -10px rgba(0, 0, 0, 0.5),
         0 0 0 2px rgba(100, 255, 218, 0.2);
 }
 
@@ -1215,7 +1228,7 @@ section {
     opacity: 0.6;
 }
 
-/* Experience Content Card - Wide 1:2 Ratio */
+/* Experience Content Card */
 .exp-content-card {
     background: linear-gradient(145deg,
             rgba(17, 34, 64, 0.95),
@@ -1231,6 +1244,45 @@ section {
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+    min-height: auto;
+}
+
+/* Company Logo Container */
+.exp-company-logo {
+    flex-shrink: 0;
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--bg-lighter), var(--bg-light));
+    border: 2px solid rgba(100, 255, 218, 0.2);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.exp-company-logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.experience-card:hover .exp-company-logo {
+    border-color: rgba(100, 255, 218, 0.5);
+    box-shadow: 0 10px 30px rgba(100, 255, 218, 0.15);
+}
+
+.experience-card:hover .exp-company-logo img {
+    transform: scale(1.05);
+}
+
+/* Experience Details Container */
+.exp-details {
+    flex: 1;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -1325,12 +1377,9 @@ section {
 }
 
 /* Reverse Layout for Alternating Cards - Content left, Image right */
-.experience-card.reverse {
-    grid-template-columns: 1.5fr 1fr;
-}
-
 .experience-card.reverse .exp-image-container {
     order: 2;
+    justify-self: end;
 }
 
 .experience-card.reverse .exp-content-card {
@@ -1382,12 +1431,37 @@ section {
         display: none;
     }
 
+    .experience-card {
+        padding-left: 0;
+    }
+
     .exp-content-card {
         padding: 25px;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .exp-company-logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    .exp-details {
+        width: 100%;
     }
 
     .exp-content-card .job-title {
         font-size: 22px;
+    }
+
+    .exp-content-card .job-duration {
+        justify-content: center;
+    }
+
+    .exp-content-card .job-description li {
+        text-align: left;
     }
 }
 
