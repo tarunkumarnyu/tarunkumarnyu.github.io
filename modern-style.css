@@ -1106,40 +1106,71 @@ section {
     box-shadow: 0 0 30px rgba(100, 255, 218, 0.6);
 }
 
-/* Slanted Image Container */
+/* Image Container - Clean with Animated Border */
 .exp-image-container {
     position: relative;
-    height: 280px;
+    height: 320px;
     overflow: hidden;
-    border-radius: 12px;
-    transform: perspective(1000px) rotateY(-5deg) skewY(-2deg);
+    border-radius: 16px;
     transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow:
         0 25px 50px -12px rgba(0, 0, 0, 0.5),
-        0 0 0 1px rgba(100, 255, 218, 0.1);
+        0 0 0 2px rgba(100, 255, 218, 0.2);
 }
 
+/* Animated gradient border on hover */
 .exp-image-container::before {
+    content: '';
+    position: absolute;
+    inset: -3px;
+    border-radius: 18px;
+    background: linear-gradient(45deg,
+            var(--cyan),
+            transparent 40%,
+            transparent 60%,
+            var(--cyan));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: borderRotate 3s linear infinite;
+}
+
+@keyframes borderRotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Overlay effect */
+.exp-image-container::after {
     content: '';
     position: absolute;
     inset: 0;
     background: linear-gradient(135deg,
-            rgba(100, 255, 218, 0.2) 0%,
+            rgba(100, 255, 218, 0.15) 0%,
             transparent 50%,
-            rgba(100, 255, 218, 0.1) 100%);
+            rgba(10, 25, 47, 0.4) 100%);
     z-index: 2;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
 
 .experience-card:hover .exp-image-container {
-    transform: perspective(1000px) rotateY(0deg) skewY(0deg) scale(1.02);
+    transform: scale(1.02);
     box-shadow:
         0 35px 70px -15px rgba(0, 0, 0, 0.6),
-        0 0 40px rgba(100, 255, 218, 0.2);
+        0 0 50px rgba(100, 255, 218, 0.3);
 }
 
 .experience-card:hover .exp-image-container::before {
+    opacity: 1;
+}
+
+.experience-card:hover .exp-image-container::after {
     opacity: 1;
 }
 
@@ -1147,11 +1178,13 @@ section {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: brightness(0.9);
 }
 
 .experience-card:hover .exp-image-container img {
     transform: scale(1.1);
+    filter: brightness(1);
 }
 
 /* Placeholder for missing images */
@@ -1179,22 +1212,23 @@ section {
     opacity: 0.6;
 }
 
-/* Experience Content Card */
+/* Experience Content Card - Larger */
 .exp-content-card {
     background: linear-gradient(145deg,
-            rgba(17, 34, 64, 0.9),
-            rgba(29, 53, 87, 0.7));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    padding: 35px;
-    border-radius: 16px;
-    border: 1px solid rgba(100, 255, 218, 0.1);
+            rgba(17, 34, 64, 0.95),
+            rgba(29, 53, 87, 0.85));
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    padding: 40px 45px;
+    border-radius: 20px;
+    border: 1px solid rgba(100, 255, 218, 0.15);
     box-shadow:
-        0 20px 40px -15px rgba(2, 12, 27, 0.8),
-        inset 0 1px 0 rgba(100, 255, 218, 0.1);
+        0 25px 50px -15px rgba(2, 12, 27, 0.9),
+        inset 0 1px 0 rgba(100, 255, 218, 0.15);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
+    min-height: 320px;
 }
 
 .exp-content-card::before {
@@ -1294,12 +1328,13 @@ section {
     direction: ltr;
 }
 
+/* Reverse layout has same straight images */
 .experience-card.reverse .exp-image-container {
-    transform: perspective(1000px) rotateY(5deg) skewY(2deg);
+    transform: none;
 }
 
 .experience-card.reverse:hover .exp-image-container {
-    transform: perspective(1000px) rotateY(0deg) skewY(0deg) scale(1.02);
+    transform: scale(1.02);
 }
 
 /* Responsive Design */
