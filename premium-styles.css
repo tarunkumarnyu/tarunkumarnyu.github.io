@@ -351,6 +351,20 @@ body::before {
     transform: translateY(0);
 }
 
+/* Mobile fallback - always visible on mobile */
+@media (max-width: 768px) {
+
+    .reveal,
+    .reveal.active,
+    .fade-up,
+    .fade-up.active,
+    .unified-project-card,
+    .unified-project-card.fade-up {
+        opacity: 1 !important;
+        transform: translateY(0) !important;
+    }
+}
+
 /* Footer enhancement */
 #footer {
     position: relative;
