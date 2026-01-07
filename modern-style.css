@@ -1054,8 +1054,9 @@ section {
    ============================================ */
 .experience-timeline {
     position: relative;
-    max-width: 1300px;
+    max-width: 1200px;
     margin: 0 auto;
+    padding: 0 20px;
 }
 
 /* Central Timeline Line */
@@ -1072,27 +1073,28 @@ section {
             var(--cyan) 95%,
             transparent 100%);
     opacity: 0.4;
+    z-index: 1;
 }
 
-/* Experience Card - 3 Column Grid: left | center(timeline) | right */
+/* Experience Card - 2 Column with gap for timeline */
 .experience-card {
     display: grid;
-    grid-template-columns: 1fr 60px 1.8fr;
-    gap: 0;
-    margin-bottom: 80px;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 80px;
+    margin-bottom: 60px;
     position: relative;
     align-items: center;
 }
 
-/* Timeline Dot - in center column */
+/* Timeline Dot - positioned in the gap between columns */
 .experience-card::before {
     content: '';
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 18px;
-    height: 18px;
+    width: 16px;
+    height: 16px;
     background: var(--bg-dark);
     border: 3px solid var(--cyan);
     border-radius: 50%;
@@ -1102,7 +1104,7 @@ section {
 }
 
 .experience-card:hover::before {
-    transform: translate(-50%, -50%) scale(1.4);
+    transform: translate(-50%, -50%) scale(1.5);
     box-shadow: 0 0 35px rgba(100, 255, 218, 0.8);
     background: var(--cyan);
 }
@@ -1324,11 +1326,11 @@ section {
 
 /* Reverse Layout for Alternating Cards - Content left, Image right */
 .experience-card.reverse {
-    grid-template-columns: 1.8fr 60px 1fr;
+    grid-template-columns: 1.5fr 1fr;
 }
 
 .experience-card.reverse .exp-image-container {
-    order: 3;
+    order: 2;
 }
 
 .experience-card.reverse .exp-content-card {
