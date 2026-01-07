@@ -1054,7 +1054,7 @@ section {
    ============================================ */
 .experience-timeline {
     position: relative;
-    max-width: 1200px;
+    max-width: 1300px;
     margin: 0 auto;
 }
 
@@ -1068,42 +1068,43 @@ section {
     height: 100%;
     background: linear-gradient(180deg,
             transparent 0%,
-            var(--cyan) 10%,
-            var(--cyan) 90%,
+            var(--cyan) 5%,
+            var(--cyan) 95%,
             transparent 100%);
-    opacity: 0.3;
+    opacity: 0.4;
 }
 
-/* Experience Card - Asymmetrical Layout */
+/* Experience Card - 3 Column Grid: left | center(timeline) | right */
 .experience-card {
     display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 50px;
-    margin-bottom: 100px;
+    grid-template-columns: 1fr 60px 1.8fr;
+    gap: 0;
+    margin-bottom: 80px;
     position: relative;
-    align-items: stretch;
+    align-items: center;
 }
 
-/* Timeline Dot */
+/* Timeline Dot - in center column */
 .experience-card::before {
     content: '';
     position: absolute;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     background: var(--bg-dark);
     border: 3px solid var(--cyan);
     border-radius: 50%;
     z-index: 10;
-    box-shadow: 0 0 20px rgba(100, 255, 218, 0.4);
+    box-shadow: 0 0 20px rgba(100, 255, 218, 0.5);
     transition: all 0.3s ease;
 }
 
 .experience-card:hover::before {
-    transform: translate(-50%, -50%) scale(1.3);
-    box-shadow: 0 0 30px rgba(100, 255, 218, 0.6);
+    transform: translate(-50%, -50%) scale(1.4);
+    box-shadow: 0 0 35px rgba(100, 255, 218, 0.8);
+    background: var(--cyan);
 }
 
 /* Image Container - Clean with Animated Border */
@@ -1321,22 +1322,17 @@ section {
     font-size: 14px;
 }
 
-/* Reverse Layout for Alternating Cards */
+/* Reverse Layout for Alternating Cards - Content left, Image right */
 .experience-card.reverse {
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1.8fr 60px 1fr;
 }
 
 .experience-card.reverse .exp-image-container {
-    order: 2;
+    order: 3;
 }
 
 .experience-card.reverse .exp-content-card {
     order: 1;
-}
-
-/* Reverse layout straight images */
-.experience-card.reverse .exp-image-container {
-    transform: none;
 }
 
 .experience-card.reverse:hover .exp-image-container {
