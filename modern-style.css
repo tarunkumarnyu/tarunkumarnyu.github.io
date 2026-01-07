@@ -1958,7 +1958,8 @@ section {
     overflow: hidden;
 }
 
-.project-card-image img {
+.project-card-image img,
+.project-card-image video {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -1966,7 +1967,8 @@ section {
     filter: brightness(0.85);
 }
 
-.unified-project-card:hover .project-card-image img {
+.unified-project-card:hover .project-card-image img,
+.unified-project-card:hover .project-card-image video {
     transform: scale(1.1);
     filter: brightness(1);
 }
