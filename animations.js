@@ -217,7 +217,7 @@ function initExperienceTabs() {
 }
 
 /* ============================================
-   PROJECT CARD HOVER EFFECTS
+   PROJECT CARD HOVER EFFECTS - ENHANCED
    ============================================ */
 function initProjectCards() {
     const cards = document.querySelectorAll('.project-card, .featured-project, .cert-card');
@@ -243,6 +243,57 @@ function initProjectCards() {
             img.style.transform = 'scale(1)';
         });
     });
+
+    // 3D Tilt Effect for Unified Project Cards
+    const unifiedCards = document.querySelectorAll('.unified-project-card');
+
+    unifiedCards.forEach((card, index) => {
+        // Add stagger delay for animation
+        card.style.transitionDelay = `${index * 0.08}s`;
+
+        card.addEventListener('mousemove', (e) => {
+            const rect = card.getBoundingClientRect();
+            const x = e.clientX - rect.left;
+            const y = e.clientY - rect.top;
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const rotateX = (y - centerY) / 15;
+            const rotateY = (centerX - x) / 15;
+
+            card.style.transform = `
+                perspective(1000px)
+                translateY(-15px)
+                rotateX(${rotateX}deg)
+                rotateY(${rotateY}deg)
+                scale(1.02)
+            `;
+        });
+
+        card.addEventListener('mouseleave', () => {
+            card.style.transform = '';
+            card.style.transitionDelay = '';
+        });
+    });
+
+    // Staggered Fade-in Animation on Scroll
+    const projectsSection = document.querySelector('#two');
+    if (projectsSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const cards = entry.target.querySelectorAll('.unified-project-card');
+                    cards.forEach((card, index) => {
+                        setTimeout(() => {
+                            card.classList.add('revealed');
+                        }, index * 100);
+                    });
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, { threshold: 0.1 });
+
+        observer.observe(projectsSection);
+    }
 }
 
 /* ============================================
