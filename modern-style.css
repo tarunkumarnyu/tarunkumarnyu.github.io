@@ -1394,15 +1394,217 @@ section {
 }
 
 /* ============================================
-   LARGE FEATURED PROJECTS SHOWCASE
-   Premium Design with Glow Effects
+   UNIFIED PROJECTS GRID
+   All projects in consistent card format
    ============================================ */
-.featured-projects-showcase {
+.projects-unified-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+/* Unified Project Card */
+.unified-project-card {
+    background: linear-gradient(145deg, var(--bg-light), rgba(29, 53, 87, 0.6));
+    border-radius: 16px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    border: 1px solid rgba(100, 255, 218, 0.05);
     display: flex;
     flex-direction: column;
-    gap: 100px;
-    margin-bottom: 100px;
 }
+
+.unified-project-card:hover {
+    transform: translateY(-12px);
+    box-shadow:
+        0 30px 60px -20px rgba(0, 0, 0, 0.7),
+        0 0 40px -15px rgba(100, 255, 218, 0.2);
+    border-color: rgba(100, 255, 218, 0.15);
+}
+
+/* Project Card Image */
+.project-card-image {
+    position: relative;
+    height: 220px;
+    overflow: hidden;
+}
+
+.project-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.3s ease;
+    filter: brightness(0.85);
+}
+
+.unified-project-card:hover .project-card-image img {
+    transform: scale(1.1);
+    filter: brightness(1);
+}
+
+/* Image Placeholder for projects without images */
+.image-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--bg-lighter), var(--bg-light));
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.image-placeholder i {
+    font-size: 48px;
+    color: var(--cyan);
+    opacity: 0.5;
+}
+
+.image-placeholder span {
+    font-family: var(--font-mono);
+    font-size: 12px;
+    color: var(--slate);
+    opacity: 0.7;
+}
+
+/* Image Overlay */
+.image-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(10, 25, 47, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.unified-project-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.image-overlay span {
+    font-family: var(--font-mono);
+    font-size: 14px;
+    color: var(--cyan);
+    padding: 12px 24px;
+    border: 1px solid var(--cyan);
+    border-radius: 8px;
+    background: rgba(100, 255, 218, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+}
+
+.image-overlay span:hover {
+    background: rgba(100, 255, 218, 0.2);
+}
+
+/* Project Card Content */
+.project-card-content {
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.project-card-content h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+    font-family: var(--font-display);
+}
+
+.project-card-content h3 a {
+    color: var(--slate-bright);
+    transition: color 0.3s ease;
+}
+
+.project-card-content h3 a:hover {
+    color: var(--cyan);
+}
+
+.project-card-content>p {
+    font-size: 14px;
+    color: var(--slate);
+    line-height: 1.6;
+    margin-bottom: 16px;
+    max-width: none;
+}
+
+.project-card-content p strong {
+    color: var(--cyan);
+}
+
+/* Project Features List */
+.project-features {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 16px 0;
+    flex-grow: 1;
+}
+
+.project-features li {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    font-size: 13px;
+    color: var(--slate);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.project-features li i {
+    color: var(--cyan);
+    font-size: 11px;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.project-features li strong {
+    color: var(--slate-bright);
+}
+
+/* Project Tech Tags */
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: auto;
+}
+
+.project-tech span {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    color: var(--cyan);
+    background: var(--cyan-tint);
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.project-tech span:hover {
+    background: rgba(100, 255, 218, 0.2);
+}
+
+/* Responsive Grid */
+@media (max-width: 1100px) {
+    .projects-unified-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 700px) {
+    .projects-unified-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .project-card-image {
+        height: 180px;
+    }
+}
+
+/* Keep old styles for backwards compatibility */
 
 .featured-project-large {
     display: grid;
