@@ -14,6 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectCards();
     initTypingEffect();
     initVideoBackground();
+    initLazyVideos();  // Lazy load project videos for performance
 });
 
 /* ============================================
@@ -496,6 +497,40 @@ function initVideoBackground() {
     video.muted = true;
     video.loop = true;
     video.playsInline = true;
+}
+
+/* ============================================
+   LAZY LOAD VIDEOS FOR PERFORMANCE
+   Only load and play videos when they come into view
+   ============================================ */
+function initLazyVideos() {
+    const lazyVideos = document.querySelectorAll('.lazy-video');
+
+    if (!lazyVideos.length) return;
+
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            const video = entry.target;
+
+            if (entry.isIntersecting) {
+                // Load and play the video
+                if (video.readyState < 2) {
+                    video.load();
+                }
+                video.play().catch(err => console.log('Video play prevented:', err));
+            } else {
+                // Pause when out of view to save resources
+                video.pause();
+            }
+        });
+    }, {
+        rootMargin: '100px',  // Start loading slightly before in view
+        threshold: 0.1
+    });
+
+    lazyVideos.forEach(video => {
+        videoObserver.observe(video);
+    });
 }
 
 console.log('✨ World-class portfolio animations loaded!');
