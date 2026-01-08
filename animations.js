@@ -14,7 +14,8 @@ document.addEventListener('DOMContentLoaded', () => {
     initProjectCards();
     initTypingEffect();
     initVideoBackground();
-    initLazyVideos();  // Lazy load project videos for performance
+    initLazyVideos();
+    initAboutSlideshow(); // Initialize About Me background slideshow
 });
 
 /* ============================================
@@ -534,3 +535,34 @@ function initLazyVideos() {
 }
 
 console.log('✨ World-class portfolio animations loaded!');
+
+/* ============================================
+   ABOUT ME BACKGROUND SLIDESHOW
+   ============================================ */
+function initAboutSlideshow() {
+    const slideshow = document.querySelector('.about-background-slideshow');
+    if (!slideshow) return;
+
+    const images = slideshow.querySelectorAll('img');
+    if (images.length === 0) return;
+
+    let currentIndex = 0;
+    const intervalTime = 4000; // 4 seconds
+
+    // Set initial state
+    images.forEach((img, index) => {
+        if (index === 0) img.classList.add('active');
+        else img.classList.remove('active');
+    });
+
+    setInterval(() => {
+        // Remove active from current
+        images[currentIndex].classList.remove('active');
+
+        // Calculate next index
+        currentIndex = (currentIndex + 1) % images.length;
+
+        // Add active to next
+        images[currentIndex].classList.add('active');
+    }, intervalTime);
+}

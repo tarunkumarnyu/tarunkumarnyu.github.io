@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <meta name="description"
         content="Mechatronics and Robotics engineer specializing in UAVs, UGVs, and autonomous robotic systems. M.S. Mechatronics at NYU Tandon." />
-    <link rel="stylesheet" href="modern-style.css" />
-    <link rel="stylesheet" href="premium-styles.css" />
+    <link rel="stylesheet" href="modern-style.css?v=2" />
+    <link rel="stylesheet" href="premium-styles.css?v=2" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
     <!-- Three.js for 3D Model Viewer -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
@@ -93,20 +93,53 @@
 
     <!-- About Section -->
     <section id="one" class="reveal">
+        <!-- Background Slideshow -->
+        <div class="about-background-slideshow">
+            <img src="images/asrl1.jpeg" alt="Background 1" class="active">
+            <img src="images/bg2.jpg" alt="Background 2">
+            <img src="images/comp/sae.jpg" alt="Background 3">
+            <img src="images/comp/vay.jpg" alt="Background 4">
+            <img src="images/comp/wrc.jpg" alt="Background 5">
+        </div>
         <h2 class="numbered-heading" data-num="01.">About Me</h2>
 
         <div class="about-grid">
             <div class="about-content">
                 <p>
-                    Hello! I'm Tarun, a robotics engineer with a passion for creating autonomous systems that push the
-                    boundaries of what's possible. My journey in robotics started with building drones and has evolved
-                    into designing complex UAV/UGV hybrid systems.
+                    Hello! I’m Tarun — a robotics engineer who loves building autonomous systems that actually work in
+                    the real world (where sensors get noisy, batteries sag, and nothing behaves exactly like the
+                    simulation).
                 </p>
                 <p>
-                    Currently, I'm pursuing my <strong style="color: var(--slate-bright);">Master's in Mechatronics and
+                    I’ve been working on robotics projects for 6+ years, starting back in high school. That’s where I
+                    got hooked — building things from scratch, breaking them, fixing them, and slowly getting better at
+                    turning messy ideas into something that moves with purpose. Over time, I ended up leading my school
+                    robotics team, and that experience shaped how I think: iterate fast, test early, and never trust a
+                    system until it survives real conditions.
+                </p>
+                <p>
+                    In undergrad, I went deep into drones and autonomy. I led our drone/UAV team, built multiple
+                    platforms, and took them to competitions — which were basically the best “real-world robotics”
+                    training you can get. When you’re under time pressure and your drone has to fly reliably, you learn
+                    quickly how important good integration is across perception, planning, and control.
+                </p>
+                <p>
+                    I’ve also really enjoyed mentoring along the way. I’ve guided junior students through design
+                    thinking and practical engineering workflows — how to define the problem clearly, explore solutions,
+                    prototype quickly, and iterate based on testing instead of guesses. Helping someone go from “I don’t
+                    know where to start” to shipping a working build is one of my favorite parts of team robotics.
+                </p>
+                <p>
+                    Over time, my projects expanded beyond aerial robotics into ground and underwater platforms too,
+                    which gave me a wider view of autonomy across very different constraints and environments. I’ve
+                    worked end-to-end across the robotics stack — perception, planning, and control — and I like
+                    projects where those pieces come together into a system that feels “alive.”
+                </p>
+                <p>
+                    Right now, I’m pursuing my <strong style="color: var(--slate-bright);">Master's in Mechatronics and
                         Robotics</strong> at <a href="https://engineering.nyu.edu/" target="_blank"
-                        class="link-fancy">NYU Tandon School of Engineering</a>, where I'm also a Graduate Research
-                    Assistant at the Agile Robotics Lab working on quadrotor perception systems.
+                        class="link-fancy">NYU Tandon School of Engineering</a>, where I’m a Graduate Research
+                    Assistant at the Agile Robotics and Perception Lab, working on quadrotor perception systems.
                 </p>
                 <p>Here are some technologies I've been working with:</p>
 
@@ -129,25 +162,7 @@
             </div>
         </div>
 
-        <!-- Stats -->
-        <div class="stats-grid">
-            <div class="stat-card fade-up">
-                <div class="stat-number">8+</div>
-                <div class="stat-label">Projects Built</div>
-            </div>
-            <div class="stat-card fade-up">
-                <div class="stat-number">4+</div>
-                <div class="stat-label">Competitions</div>
-            </div>
-            <div class="stat-card fade-up">
-                <div class="stat-number">40+</div>
-                <div class="stat-label">Team Members Led</div>
-            </div>
-            <div class="stat-card fade-up">
-                <div class="stat-number">3</div>
-                <div class="stat-label">Certifications</div>
-            </div>
-        </div>
+
     </section>
 
     <!-- Experience Section -->
@@ -276,7 +291,6 @@
         <!-- Unified Projects Grid -->
         <div class="projects-unified-grid">
 
-            <!-- Project 1 - LLM-Drone -->
             <div class="unified-project-card fade-up">
                 <div class="project-card-image">
                     <a href="#">
@@ -289,15 +303,22 @@
                     </a>
                 </div>
                 <div class="project-card-content">
-                    <h3><a href="#">LLM-Drone</a></h3>
-                    <p><strong>LLM-powered autonomous drone</strong> - Details coming soon.</p>
+                    <h3><a href="#">ARPL LLM Planner</a></h3>
+                    <p><strong>Natural Language Drone Control.</strong> This project bridges the gap between natural
+                        language understanding and autonomous robotic control, enabling users to command a drone using
+                        plain English instructions like "track the person in the red shirt". It leverages Large Language
+                        Models (LLMs) to interpret complex intents and attribute descriptions.</p>
+                    <p>At the core is a novel <strong>Hierarchical Perception Pipeline</strong> fusing Vision-Language
+                        Models (VLMs) with YOLOv11. The VLM semantically identifies the correct target based on user
+                        description, while YOLO maintains high-frequency (30fps) tracking, creating a system that is
+                        both semantically smart and reactively fast.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Feature 1</li>
-                        <li><i class="fas fa-check"></i> Feature 2</li>
-                        <li><i class="fas fa-check"></i> Feature 3</li>
+                        <li><i class="fas fa-check"></i> Natural Language Interface</li>
+                        <li><i class="fas fa-check"></i> Hierarchical VLM + YOLO Fusion</li>
+                        <li><i class="fas fa-check"></i> Real-time Attribute Tracking</li>
                     </ul>
                     <div class="project-tech">
-                        <span>LLM</span><span>ROS2</span><span>Python</span>
+                        <span>LLM</span><span>VLM</span><span>YOLOv11</span><span>ROS2</span>
                     </div>
                 </div>
             </div>

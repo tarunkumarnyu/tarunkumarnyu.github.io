@@ -792,3 +792,108 @@ body::after {
         padding: 20px;
     }
 }
+
+/* ============================================
+   ABOUT ME SLIDESHOW
+   Subtle background transitions
+   ============================================ */
+.about-background-slideshow {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100vw;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.about-background-slideshow img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+    filter: brightness(0.6) blur(1px);
+    /* Brighter and less blurred */
+}
+
+.about-background-slideshow img.active {
+    opacity: 0.3;
+    /* Increased visibility */
+}
+
+/* Ensure section has relative positioning for absolute children */
+#one {
+    position: relative;
+    background: transparent !important;
+    /* Allow background to show through if needed */
+}
+
+/* Force full width on #one and override constraints */
+#one {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 100px 40px !important;
+    width: 100% !important;
+}
+
+.about-grid {
+    display: grid !important;
+    grid-template-columns: 3fr 1fr !important;
+    gap: 50px !important;
+    max-width: 1200px !important;
+    margin: 0 auto !important;
+    align-items: center !important;
+}
+
+/* Allow text to fill the wide column */
+.about-content p {
+    max-width: 100% !important;
+    text-align: justify;
+}
+
+/* Improve readability with dark overlay and brighter text */
+.about-background-slideshow::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(10, 25, 47, 0.7);
+    /* Dark overlay */
+    z-index: 1;
+}
+
+.about-content p {
+    position: relative;
+    z-index: 2;
+    /* Ensure text is above overlay */
+    color: var(--slate-bright) !important;
+    /* Brighter text */
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+    /* Lift off background */
+    font-weight: 500;
+}
+
+.about-image {
+    max-width: 250px !important;
+    margin: 0 auto !important;
+}
+
+/* Mobile responsive override */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr !important;
+        text-align: center;
+    }
+
+    .about-image {
+        margin: 40px auto 0 !important;
+    }
+}
