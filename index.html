@@ -337,13 +337,13 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Doorbusters</a></h3>
-                    <p><strong>Decentralized Autonomy Stack for Heterogeneous Swarms.</strong> Built a three-layer 
-                        framework for UGVs + UAVs operating in confined indoor spaces with narrow door bottlenecks: 
-                        (1) Decentralized goal assignment using DGNN-GA with iterative message passing, 
-                        (2) Swarm coordination to preserve connectivity and prevent congestion, and 
+                    <p><strong>Decentralized Autonomy Stack for Heterogeneous Swarms.</strong> Built a three-layer
+                        framework for UGVs + UAVs operating in confined indoor spaces with narrow door bottlenecks:
+                        (1) Decentralized goal assignment using DGNN-GA with iterative message passing,
+                        (2) Swarm coordination to preserve connectivity and prevent congestion, and
                         (3) Local collision-free motion control.</p>
-                    <p>Implemented and validated the decentralized coordination pipeline: prototyped flocking behavior 
-                        in MATLAB, ported to ROS 2 Humble with Unity3D simulation. Used Extended Olfati–Saber Flocking 
+                    <p>Implemented and validated the decentralized coordination pipeline: prototyped flocking behavior
+                        in MATLAB, ported to ROS 2 Humble with Unity3D simulation. Used Extended Olfati–Saber Flocking
                         controller with tuned gains for cohesive formation and controllable oscillations.</p>
                     <ul class="project-features">
                         <li><i class="fas fa-check"></i> DGNN-GA Decentralized Goal Assignment</li>
@@ -370,16 +370,22 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Parachute Fail-Safe System</a></h3>
-                    <p>A real-time <strong>parachute deployment fail-safe system</strong> for UAVs with
-                        Mars-Rover–inspired
-                        descent sequencing and redundant safety sensing.</p>
+                    <p><strong>Real-time Parachute Deployment Fail-Safe for UAVs.</strong> A complete emergency
+                        recovery system built around a Propeller microcontroller with dual IMU redundancy—combining
+                        an external IMU with the UAV's onboard flight controller IMU for robust safety sensing.
+                        The system uses Mars-Rover–inspired descent sequencing with altitude-triggered deployment
+                        and state transitions.</p>
+                    <p>Features a distance sensor for ground proximity detection that triggers a servo-actuated
+                        retractable landing gear for softer landings. The firmware handles fall detection,
+                        motor-power-loss detection, emergency override, and safe system disarm conditions.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Dual IMU redundancy (Propeller + Flight Controller)</li>
-                        <li><i class="fas fa-check"></i> Altitude-triggered deployment & state transitions</li>
-                        <li><i class="fas fa-check"></i> Servo-actuated retractable landing gear</li>
+                        <li><i class="fas fa-check"></i> Dual IMU Redundancy (External + Flight Controller)</li>
+                        <li><i class="fas fa-check"></i> Mars-Rover–Inspired Descent Sequencing</li>
+                        <li><i class="fas fa-check"></i> Fall & Motor-Power-Loss Detection Firmware</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Propeller MCU</span><span>IMU</span><span>Firmware</span><span>Fall Detection</span>
+                        <span>Propeller MCU</span><span>IMU</span><span>Firmware</span><span>Fall
+                            Detection</span><span>Servo Control</span>
                     </div>
                 </div>
             </div>
@@ -397,15 +403,24 @@
                     </a>
                 </div>
                 <div class="project-card-content">
-                    <h3><a href="#">RL Project</a></h3>
-                    <p><strong>Reinforcement Learning</strong> robotics project - Details coming soon.</p>
+                    <h3><a href="#">Reinforcement Learning for Quadruped</a></h3>
+                    <p><strong>PPO-based Locomotion Policy for Unitree Go2.</strong> A robust walking policy
+                        trained using Proximal Policy Optimization (PPO) in Isaac Lab with carefully engineered
+                        MDP beyond simple velocity-tracking. The environment runs at 200 Hz sim with 50 Hz policy
+                        control, using a 12-DoF joint position action space with clock-phase inputs (sine/cosine)
+                        for gait timing and a manual PD torque controller (Kp=20, Kd=0.5).</p>
+                    <p>Behavior is shaped using rewards for linear XY and yaw command tracking, Raibert-style
+                        trot gait shaping, and smoothness/stability regularizers. For sim-to-real robustness,
+                        a randomized actuator friction model with episode-wise randomization is implemented.
+                        The policy converges quickly with strong command tracking metrics.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Feature 1</li>
-                        <li><i class="fas fa-check"></i> Feature 2</li>
-                        <li><i class="fas fa-check"></i> Feature 3</li>
+                        <li><i class="fas fa-check"></i> PPO Training in Isaac Lab (200 Hz sim, 50 Hz control)</li>
+                        <li><i class="fas fa-check"></i> Raibert-style Trot Gait Shaping</li>
+                        <li><i class="fas fa-check"></i> Sim-to-Real Friction Randomization</li>
                     </ul>
                     <div class="project-tech">
-                        <span>RL</span><span>Python</span><span>Simulation</span>
+                        <span>PPO</span><span>Isaac Lab</span><span>Python</span><span>Unitree
+                            Go2</span><span>Sim-to-Real</span>
                     </div>
                 </div>
             </div>
@@ -424,17 +439,22 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="reconfig.html">Reconfigurable UAV+UGV</a></h3>
-                    <p>A revolutionary <strong>morphing drone</strong> that seamlessly transforms between aerial and
-                        ground
-                        vehicle modes with a unique folding mechanism.</p>
+                    <p><strong>CalTech M4 Morphbot-Inspired Hybrid Robot.</strong> A morphing robot designed for
+                        search and rescue that seamlessly transforms between UAV and UGV modes. The system
+                        autonomously flies to designated locations for rapid response, then transitions to ground
+                        mode in complex terrains—shifting from dynamically to statically stable locomotion for
+                        significantly reduced power consumption.</p>
+                    <p>Features 8 actuators (4 BLDC for flight, 2 DC motors for wheels, 2 servos for reconfiguration),
+                        GPS/telemetry for real-time navigation, FPV camera with 5.8GHz video transmission, and
+                        topology-optimized wheels with 1:10 gear ratio. Built with PLA+ and carbon fiber chassis.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> FEA stress analysis with 2.5+ safety factor</li>
-                        <li><i class="fas fa-check"></i> CFD optimized aerodynamics</li>
-                        <li><i class="fas fa-check"></i> 30% weight reduction via topology optimization</li>
+                        <li><i class="fas fa-check"></i> Dual-Mode UAV↔UGV Transformation</li>
+                        <li><i class="fas fa-check"></i> FEA Stress Analysis with 2.5+ Safety Factor</li>
+                        <li><i class="fas fa-check"></i> 30% Weight Reduction via Topology Optimization</li>
                     </ul>
                     <div class="project-tech">
-                        <span>SolidWorks</span><span>ANSYS</span><span>CFD</span><span>3D
-                            Printing</span><span>PX4</span>
+                        <span>SolidWorks</span><span>ANSYS</span><span>CFD</span><span>PX4</span><span>3D
+                            Printing</span>
                     </div>
                 </div>
             </div>
@@ -452,15 +472,24 @@
                     </a>
                 </div>
                 <div class="project-card-content">
-                    <h3><a href="#">UGV RTAB SLAM</a></h3>
-                    <p><strong>RTAB-Map SLAM</strong> implementation on UGV - Details coming soon.</p>
+                    <h3><a href="#">VLER (Visual + LiDAR Exploration Robot)</a></h3>
+                    <p><strong>Autonomous Indoor/Hospital Navigation Robot.</strong> An exploration robot designed
+                        to autonomously deliver supplies to specific rooms after receiving commands from staff.
+                        The system combines an RPLIDAR 2D scan for reliable obstacle sensing with an Intel RealSense
+                        D435i RGB-D stream to support SLAM-based mapping (occupancy grid / point cloud) and safe
+                        navigation in dynamic indoor environments.</p>
+                    <p>Features an end-to-end robotics stack with Raspberry Pi 5 running ROS nodes for mapping
+                        and obstacle avoidance, and Arduino Uno for low-level interfacing. Uses DC motors with
+                        encoders and 10:1 gear reduction for controllable torque and precise movement, validated
+                        through unit tests and closed-loop navigation demos.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Feature 1</li>
-                        <li><i class="fas fa-check"></i> Feature 2</li>
-                        <li><i class="fas fa-check"></i> Feature 3</li>
+                        <li><i class="fas fa-check"></i> RPLIDAR + Intel RealSense D435i Fusion</li>
+                        <li><i class="fas fa-check"></i> ROS-based SLAM & Obstacle Avoidance</li>
+                        <li><i class="fas fa-check"></i> Raspberry Pi 5 + Arduino Uno Architecture</li>
                     </ul>
                     <div class="project-tech">
-                        <span>RTAB-Map</span><span>SLAM</span><span>ROS</span>
+                        <span>ROS</span><span>SLAM</span><span>RPLIDAR</span><span>RealSense</span><span>Raspberry
+                            Pi</span>
                     </div>
                 </div>
             </div>
@@ -478,16 +507,25 @@
                     </a>
                 </div>
                 <div class="project-card-content">
-                    <h3><a href="#">Maze Solving</a></h3>
-                    <p><strong>Autonomous maze-solving robot</strong> - Details coming soon.</p>
-                    <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Feature 1</li>
-                        <li><i class="fas fa-check"></i> Feature 2</li>
-                        <li><i class="fas fa-check"></i> Feature 3</li>
-                    </ul>
-                    <div class="project-tech">
-                        <span>Path Planning</span><span>Sensors</span><span>Embedded</span>
-                    </div>
+                    <h3><a href="#">Voyager (Visual-based Maze Navigation)</a></h3>
+                    <p><strong>Image-Only Navigation Without Maps or GPS.</strong> A vision-based navigation system
+                        that guides a robot through a maze using only camera images—no map, GPS, or odometry required.
+                        Uses CosPlace (ResNet) for 512-D global descriptor extraction with BallTree KNN retrieval
+                        (~1–2 ms), verified by SuperPoint + SuperGlue with Essential Matrix RANSAC inlier counting
+                        to reject perceptual aliasing and viewpoint changes.</p>
+                    <p>Constructs a robust topological graph with edges only when appearance similarity (CosPlace
+                        distance < 0.25) and geometric consistency (≥80 inliers) are satisfied. Navigation uses A*
+                            shortest-path planning with recovery logic: stuck detection, rotational search mode, and
+                            waypoint locking to prevent oscillations.</p>
+                            <ul class="project-features">
+                                <li><i class="fas fa-check"></i> CosPlace + SuperPoint/SuperGlue Pipeline</li>
+                                <li><i class="fas fa-check"></i> Topological Graph with Loop Closure</li>
+                                <li><i class="fas fa-check"></i> A* Navigation with Recovery Logic</li>
+                            </ul>
+                            <div class="project-tech">
+                                <span>CosPlace</span><span>SuperGlue</span><span>Computer
+                                    Vision</span><span>A*</span><span>Python</span>
+                            </div>
                 </div>
             </div>
 
@@ -505,14 +543,24 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Project Millet</a></h3>
-                    <p><strong>Project Millet</strong> - Details coming soon.</p>
+                    <p><strong>ROS-Based Agricultural Drone with Ground Coordination.</strong> An autonomous
+                        agricultural
+                        drone powered by Pixhawk 6X, designed for precise flight and targeted payload delivery in
+                        farming operations. Features a robust autonomy stack with PID-based stabilization and tracking,
+                        enabling repeatable waypoint navigation and accurate dispensing for safe, consistent field
+                        operations.</p>
+                    <p>Part of a coordinated ground + aerial agricultural system: the drone docks for automatic
+                        charging and rapid fertilizer refill on a ground robot that serves as a mobile "service station"
+                        with onboard power supply and fertilizer stock—reducing downtime and enabling longer, scalable
+                        farm missions.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Feature 1</li>
-                        <li><i class="fas fa-check"></i> Feature 2</li>
-                        <li><i class="fas fa-check"></i> Feature 3</li>
+                        <li><i class="fas fa-check"></i> Pixhawk 6X + ROS Autonomy Stack</li>
+                        <li><i class="fas fa-check"></i> Precision Waypoint & Payload Delivery</li>
+                        <li><i class="fas fa-check"></i> Ground Robot Mobile Docking Concept</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Tech 1</span><span>Tech 2</span><span>Tech 3</span>
+                        <span>ROS</span><span>Pixhawk 6X</span><span>Agriculture</span><span>Waypoint
+                            Nav</span><span>Docking</span>
                     </div>
                 </div>
             </div>
@@ -530,17 +578,24 @@
                     </a>
                 </div>
                 <div class="project-card-content">
-                    <h3><a href="#">Smart Clean</a></h3>
-                    <p><strong>Autonomous floor cleaning robot</strong> with intelligent navigation, obstacle avoidance,
-                        and
-                        LIDAR-based SLAM.</p>
+                    <h3><a href="#">Smart Cleaning Robot</a></h3>
+                    <p><strong>Autonomous Dry Sweeping & Wet Mopping Robot.</strong> A cleaning robot prototype
+                        that performs both dry sweeping and wet mopping with sensor-driven autonomy. Uses ultrasonic
+                        sensing for obstacle detection and collision avoidance while maintaining coverage. Features
+                        moisture/humidity feedback on the sponge with a water tank + pump system to maintain sponge
+                        wetness and switch behavior based on water availability.</p>
+                    <p>Built with end-to-end mechatronics integration: CAD-based mechanical layout, laser-cut
+                        transparent acrylic chassis with 3D-printed standoffs, and full wiring/circuit integration.
+                        PBASIC (Basic Stamp 2) control logic handles moisture reading for wet/dry mode switching,
+                        servo-actuated sweeping/mopping, and ultrasonic-triggered obstacle avoidance.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> LIDAR-based SLAM</li>
-                        <li><i class="fas fa-check"></i> Intelligent navigation</li>
-                        <li><i class="fas fa-check"></i> Efficient room coverage</li>
+                        <li><i class="fas fa-check"></i> Dual Mode: Dry Sweeping + Wet Mopping</li>
+                        <li><i class="fas fa-check"></i> Moisture Sensing & Auto Water Pump</li>
+                        <li><i class="fas fa-check"></i> Ultrasonic Obstacle Avoidance</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Navigation</span><span>SLAM</span><span>Sensors</span>
+                        <span>Basic Stamp 2</span><span>Sensors</span><span>CAD</span><span>Laser
+                            Cutting</span><span>Mechatronics</span>
                     </div>
                 </div>
             </div>
@@ -559,16 +614,25 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Underwater ROV</a></h3>
-                    <p><strong>6-thruster ROV</strong> with automatic resurfacing safety system, rated to 50m depth with
-                        live
-                        video feed.</p>
+                    <p><strong>6-Thruster ROV for Underwater Exploration.</strong> A compact remotely operated vehicle
+                        (300×300×200 mm) designed for underwater exploration and inspection with strong maneuverability
+                        and automatic resurfacing safety. Features A2212 1000KV BLDC motors with 30A ESCs in an
+                        optimized
+                        45° forward/rear thruster configuration that balances forces, reduces yaw moments, and improves
+                        straight-line tracking underwater.</p>
+                    <p>Built with a PVC watertight hull and PETG 3D-printed thruster casings/propellers, powered by
+                        a 3S 4200 mAh LiPo via power distribution board. Control through Pixhawk + ArduSub (ArduPilot)
+                        for stable motion control and sensor integration. Validated through buoyancy tuning,
+                        thrust/maneuver
+                        tests, and demonstration runs.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> 6 thruster configuration</li>
-                        <li><i class="fas fa-check"></i> Auto-resurfacing safety</li>
-                        <li><i class="fas fa-check"></i> Live video streaming</li>
+                        <li><i class="fas fa-check"></i> 45° Optimized 6-Thruster Configuration</li>
+                        <li><i class="fas fa-check"></i> Pixhawk + ArduSub Control System</li>
+                        <li><i class="fas fa-check"></i> Auto-Resurfacing Safety Feature</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Waterproofing</span><span>Thrusters</span><span>ROV</span>
+                        <span>ArduSub</span><span>Pixhawk</span><span>Waterproofing</span><span>BLDC
+                            Motors</span><span>3D Printing</span>
                     </div>
                 </div>
             </div>
@@ -587,18 +651,24 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Zeus</a></h3>
-                    <p>An <strong>award-winning competition drone</strong> with unprecedented 1:1 thrust-to-weight ratio
-                        while
-                        carrying full payload.</p>
+                    <p><strong>Hexacopter UAV for Autonomous Waypoint Missions.</strong> A stable, payload-capable
+                        platform designed for manual flights and autonomous waypoint missions. Features end-to-end
+                        airframe + propulsion sizing with carbon-fiber plate + 3K CF tube arm layout, optimized
+                        through topology/structural checks for high stiffness at low mass. Symmetric dual-battery
+                        placement ensures balanced center of gravity for predictable handling.</p>
+                    <p>Integrated complete avionics stack: Pixhawk Cube Orange + Here3 GPS, high-current ESC modules
+                        with filtering, and Mission Planner for GPS missions (takeoff → waypoint tracking → RTH).
+                        Features a servo-actuated payload bay with locked double-door drop mechanism for clean
+                        payload release without destabilizing the vehicle.</p>
                     <ul class="project-features">
                         <li><i class="fas fa-trophy" style="color: gold;"></i> <strong>Winner</strong> - Rotorcraft
-                            2024, NITTE
-                        </li>
-                        <li><i class="fas fa-check"></i> Custom PID tuning</li>
-                        <li><i class="fas fa-check"></i> Optimized motor & propeller selection</li>
+                            2024, NITTE</li>
+                        <li><i class="fas fa-check"></i> Pixhawk Cube Orange + Here3 GPS</li>
+                        <li><i class="fas fa-check"></i> Servo-Actuated Payload Drop System</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Frame Design</span><span>Motor Selection</span><span>PID Tuning</span>
+                        <span>Pixhawk</span><span>Carbon Fiber</span><span>Mission Planner</span><span>GPS
+                            Navigation</span>
                     </div>
                 </div>
             </div>
@@ -617,16 +687,22 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Phoenix</a></h3>
-                    <p>A <strong>high-altitude autonomous drone</strong> engineered for extreme payload capacity and
-                        extended
-                        flight times at 3,000+ feet.</p>
+                    <p><strong>Medium-Class High-Altitude Research Drone.</strong> A payload-capable UAV designed to
+                        carry 3 kg of atmospheric sensors to high altitudes. Powered by custom Molicell 21700 battery
+                        packs optimized for high flight time without compromising weight, enabling extended research
+                        missions at altitude.</p>
+                    <p>Developed in collaboration with <strong>NARL (National Atmospheric Research Laboratory)</strong>.
+                        Successfully conducted multiple flight tests with UAVs equipped with atmospheric sensors,
+                        reaching altitudes of 1 km+ and now targeting 2.5 km for future atmospheric research missions.
+                    </p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> 11 lbs payload capacity</li>
-                        <li><i class="fas fa-check"></i> Custom Molicel 21700 battery (25Ah)</li>
-                        <li><i class="fas fa-check"></i> 45+ min flight time with full payload</li>
+                        <li><i class="fas fa-check"></i> 3 kg Payload Capacity for Sensors</li>
+                        <li><i class="fas fa-check"></i> NARL Collaboration – 1 km+ Altitude Achieved</li>
+                        <li><i class="fas fa-check"></i> Custom Molicell 21700 Battery (25Ah)</li>
                     </ul>
                     <div class="project-tech">
-                        <span>PX4</span><span>GPS Navigation</span><span>Carbon Fiber</span><span>LiPo Design</span>
+                        <span>PX4</span><span>GPS Navigation</span><span>Carbon Fiber</span><span>Atmospheric
+                            Research</span>
                     </div>
                 </div>
             </div>
@@ -645,16 +721,24 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Osprey</a></h3>
-                    <p>Agile aerial robot with an integrated <strong>gripper system</strong> capable of picking up 0.6
-                        lbs
-                        payload with force feedback.</p>
+                    <p><strong>High-Speed Payload Pickup Drone.</strong> A high-speed, agile drone engineered to
+                        grasp and carry a 500 g payload while completing a full pick-and-loop mission as fast as
+                        possible. Features a lightweight yet rigid airframe optimized through topology optimization,
+                        strict weight budgeting, and aerodynamic shaping to minimize drag without compromising
+                        maneuverability during aggressive turns and acceleration.</p>
+                    <p>Incorporates intentional airflow paths to cool internal electronics under high-throttle
+                        operation, improving reliability across repeated runs. Recognized as one of the fastest
+                        drones to complete the payload pickup and loop mission at the World Robotics Championship
+                        (Technoxian).</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Custom servo-driven mechanism</li>
-                        <li><i class="fas fa-check"></i> Force feedback control</li>
-                        <li><i class="fas fa-check"></i> Precision payload handling</li>
+                        <li><i class="fas fa-trophy" style="color: silver;"></i> Top Performer - World Robotics
+                            Championship</li>
+                        <li><i class="fas fa-check"></i> Topology-Optimized Lightweight Airframe</li>
+                        <li><i class="fas fa-check"></i> Integrated Airflow Cooling Design</li>
                     </ul>
                     <div class="project-tech">
-                        <span>SolidWorks</span><span>Servo Control</span><span>Gripper</span>
+                        <span>Topology Optimization</span><span>Aerodynamics</span><span>Gripper</span><span>High-Speed
+                            Flight</span>
                     </div>
                 </div>
             </div>
@@ -671,16 +755,23 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">Spiderbot</a></h3>
-                    <p><strong>Multi-legged walking robot</strong> with custom inverse kinematics, smooth gait
-                        transitions and
-                        terrain adaptation.</p>
+                    <p><strong>5-Legged Rescue Robot for Disaster Environments.</strong> A multi-legged robot designed
+                        to overcome limitations of wheeled platforms on rubble/uneven terrain. Features a distributed
+                        ESP32-based embedded system driving 12 MG995 servos with an alternative gait algorithm
+                        supporting
+                        forward/backward motion and in-place rotation while maintaining platform stability.</p>
+                    <p>Wireless teleoperation via ESP-NOW with dual-joystick control, plus ESP32-CAM live video stream
+                        for real-time monitoring. Integrated human detection using HOG features + SVM classifier for
+                        "find-and-verify" rescue scouting capability. 3D-printed construction for improved durability
+                        and rapid prototyping.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> 8-leg hexapod design</li>
-                        <li><i class="fas fa-check"></i> Custom inverse kinematics</li>
-                        <li><i class="fas fa-check"></i> Terrain adaptation</li>
+                        <li><i class="fas fa-check"></i> Alternative Gait Algorithm (12 Servo Control)</li>
+                        <li><i class="fas fa-check"></i> ESP-NOW Wireless Teleoperation</li>
+                        <li><i class="fas fa-check"></i> HOG+SVM Human Detection on ESP32-CAM</li>
                     </ul>
                     <div class="project-tech">
-                        <span>Kinematics</span><span>Servo Control</span><span>Robotics</span>
+                        <span>ESP32</span><span>Servo Control</span><span>Computer Vision</span><span>3D
+                            Printing</span><span>Rescue</span>
                     </div>
                 </div>
             </div>
@@ -697,14 +788,23 @@
                 </div>
                 <div class="project-card-content">
                     <h3><a href="#">SCARA Manipulation</a></h3>
-                    <p><strong>SCARA robot arm</strong> manipulation project - Details coming soon.</p>
+                    <p><strong>Kinematic Control & Trajectory Tracking.</strong> Implemented forward and inverse
+                        differential kinematics for a 4-DOF SCARA manipulator using DH parameterization. Developed
+                        trajectory tracking controllers using both Jacobian inverse and Jacobian transpose methods,
+                        with Euler integration (1 ms timestep) for smooth end-effector motion along position and
+                        velocity reference paths.</p>
+                    <p>Extended to second-order inverse kinematics with obstacle avoidance by exploiting manipulator
+                        redundancy. Used Jacobian pseudo-inverse to relax operational space constraints while maximizing
+                        distance from spherical obstacles along the trajectory—demonstrating practical collision-free
+                        motion planning in MATLAB/Simulink.</p>
                     <ul class="project-features">
-                        <li><i class="fas fa-check"></i> Feature 1</li>
-                        <li><i class="fas fa-check"></i> Feature 2</li>
-                        <li><i class="fas fa-check"></i> Feature 3</li>
+                        <li><i class="fas fa-check"></i> DH-based Forward & Inverse Kinematics</li>
+                        <li><i class="fas fa-check"></i> Jacobian Inverse/Transpose Control</li>
+                        <li><i class="fas fa-check"></i> Obstacle Avoidance via Pseudo-inverse</li>
                     </ul>
                     <div class="project-tech">
-                        <span>SCARA</span><span>Kinematics</span><span>Control</span>
+                        <span>MATLAB</span><span>Simulink</span><span>Kinematics</span><span>Jacobian</span><span>Motion
+                            Planning</span>
                     </div>
                 </div>
             </div>
